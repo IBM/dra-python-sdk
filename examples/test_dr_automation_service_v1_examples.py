@@ -250,7 +250,7 @@ class TestDrAutomationServiceV1Examples:
                 machine_type='s922',
                 orchestrator_location_type='off-premises',
                 orchestrator_name='drautomationprimarybypyh1105',
-                orchestrator_password='EverytimeNewPassword@1',
+                orchestrator_password='abcdefgh@123456',
                 orchestrator_workspace_id='75cbf05b-78f6-406e-afe7-a904f646d798',
                 
                 # Optional parameters (but commonly used)
@@ -266,8 +266,8 @@ class TestDrAutomationServiceV1Examples:
                 standby_tier='tier1',
                 
                 # MFA fields (optional)
-                client_id='123abcd-97d2-4b14-bf62-8eaecc67a122',
-                client_secret='abcdefgT5rS8wK6qR9dD7vF1hU4sA3bE2jG0pL9oX7yC',
+                client_id='123abcd-abcd-4b14-bf62-123456abcdef',
+                client_secret='abcdefgh123456abcdefg123456',
                 tenant_name='xxx.ibm.com',
             )
 

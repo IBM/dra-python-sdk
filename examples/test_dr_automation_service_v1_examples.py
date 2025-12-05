@@ -59,8 +59,7 @@ class TestDrAutomationServiceV1Examples:
 
             # begin-common
 
-            dr_automation_service_service = DrAutomationServiceV1.new_instance(
-            )
+            dr_automation_service_service = DrAutomationServiceV1.new_instance()
 
             # end-common
             assert dr_automation_service_service is not None
@@ -252,19 +251,16 @@ class TestDrAutomationServiceV1Examples:
                 orchestrator_name='drautomationprimarybypyh1105',
                 orchestrator_password='abcdefgh@123456',
                 orchestrator_workspace_id='75cbf05b-78f6-406e-afe7-a904f646d798',
-                
                 # Optional parameters (but commonly used)
                 api_key='apikey should pass',
                 orchestrator_ha=True,
                 tier='tier1',
                 ssh_key_name='vijaykey',
-                
                 # Standby fields (only for HA)
                 standby_orchestrator_name='drautomationstandbypyh1105',
                 standby_orchestrator_workspace_id='71027b79-0e31-44f6-a499-63eca1a66feb',
                 standby_machine_type='s922',
                 standby_tier='tier1',
-                
                 # MFA fields (optional)
                 client_id='123abcd-abcd-4b14-bf62-123456abcdef',
                 client_secret='abcdefgh123456abcdefg123456',

@@ -41,7 +41,7 @@ IBM Cloud services:
 
 Service Name | Module Name | Imported Class Name
 --- | ---| ---
-[DrAutomation Service](https://test.cloud.ibm.com/apidocs/dr-automation-powervs) | dra_python_sdk.dr_automation_service_v1 | DrAutomationServiceV1
+[DrAutomation Service](https://cloud.ibm.com/apidocs/dr-automation-powervs) | dra_python_sdk.dr_automation_service_v1 | DrAutomationServiceV1
 
 ## Prerequisites
 

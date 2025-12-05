@@ -31,11 +31,9 @@ import urllib
 from dra_python_sdk.dr_automation_service_v1 import *
 
 
-_service = DrAutomationServiceV1(
-    authenticator=NoAuthAuthenticator()
-)
+_service = DrAutomationServiceV1(authenticator=NoAuthAuthenticator())
 
-_base_url = 'https://power-dra.test.cloud.ibm.com'
+_base_url = 'https://power-dra.cloud.ibm.com'
 _service.set_service_url(_base_url)
 
 
@@ -1025,7 +1023,7 @@ class TestCreateManageDr:
         """
         # Set up mock
         url = preprocess_url('/drautomation/v1/manage_dr/123456d3-1122-3344-b67d-4389b44b7bf9')
-        mock_response = '{"dashboard_url": "https://power-dra.test.cloud.ibm.com/power-dra-ui?instance_id=crn:v1:bluemix:public:power-dr-automation:us-south:a/fe3c2ccd058e407c81e1dba2b5c0e0d6:e3d09875-bbf8-4d8a-b52c-abefb67a53c5::", "id": "crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::"}'
+        mock_response = '{"dashboard_url": "https://power-dra.cloud.ibm.com/power-dra-ui?instance_id=crn:v1:bluemix:public:power-dr-automation:us-south:a/fe3c2ccd058e407c81e1dba2b5c0e0d6:e3d09875-bbf8-4d8a-b52c-abefb67a53c5::", "id": "crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::"}'
         responses.add(
             responses.POST,
             url,
@@ -1145,7 +1143,7 @@ class TestCreateManageDr:
         """
         # Set up mock
         url = preprocess_url('/drautomation/v1/manage_dr/123456d3-1122-3344-b67d-4389b44b7bf9')
-        mock_response = '{"dashboard_url": "https://power-dra.test.cloud.ibm.com/power-dra-ui?instance_id=crn:v1:bluemix:public:power-dr-automation:us-south:a/fe3c2ccd058e407c81e1dba2b5c0e0d6:e3d09875-bbf8-4d8a-b52c-abefb67a53c5::", "id": "crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::"}'
+        mock_response = '{"dashboard_url": "https://power-dra.cloud.ibm.com/power-dra-ui?instance_id=crn:v1:bluemix:public:power-dr-automation:us-south:a/fe3c2ccd058e407c81e1dba2b5c0e0d6:e3d09875-bbf8-4d8a-b52c-abefb67a53c5::", "id": "crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::"}'
         responses.add(
             responses.POST,
             url,
@@ -1254,7 +1252,7 @@ class TestCreateManageDr:
         """
         # Set up mock
         url = preprocess_url('/drautomation/v1/manage_dr/123456d3-1122-3344-b67d-4389b44b7bf9')
-        mock_response = '{"dashboard_url": "https://power-dra.test.cloud.ibm.com/power-dra-ui?instance_id=crn:v1:bluemix:public:power-dr-automation:us-south:a/fe3c2ccd058e407c81e1dba2b5c0e0d6:e3d09875-bbf8-4d8a-b52c-abefb67a53c5::", "id": "crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::"}'
+        mock_response = '{"dashboard_url": "https://power-dra.cloud.ibm.com/power-dra-ui?instance_id=crn:v1:bluemix:public:power-dr-automation:us-south:a/fe3c2ccd058e407c81e1dba2b5c0e0d6:e3d09875-bbf8-4d8a-b52c-abefb67a53c5::", "id": "crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::"}'
         responses.add(
             responses.POST,
             url,
@@ -1657,7 +1655,9 @@ class TestGetEvent:
         get_event()
         """
         # Set up mock
-        url = preprocess_url('/drautomation/v1/service_instances/123456d3-1122-3344-b67d-4389b44b7bf9/events/00116b2a-9326-4024-839e-fb5364b76898')
+        url = preprocess_url(
+            '/drautomation/v1/service_instances/123456d3-1122-3344-b67d-4389b44b7bf9/events/00116b2a-9326-4024-839e-fb5364b76898'
+        )
         mock_response = '{"action": "create", "api_source": "dr-automation-api", "event_id": "1cecfe43-43cd-4b1b-86be-30c2d3d2a25f", "level": "info", "message": "Service Instance created successfully", "message_data": {"anyKey": "anyValue"}, "metadata": {"anyKey": "anyValue"}, "resource": "ProvisionID", "time": "2025-06-23T07:12:49.840Z", "timestamp": "1750662769", "user": {"email": "abcuser@ibm.com", "name": "abcuser", "user_id": "IBMid-695000abc7E"}}'
         responses.add(
             responses.GET,
@@ -1699,7 +1699,9 @@ class TestGetEvent:
         test_get_event_required_params()
         """
         # Set up mock
-        url = preprocess_url('/drautomation/v1/service_instances/123456d3-1122-3344-b67d-4389b44b7bf9/events/00116b2a-9326-4024-839e-fb5364b76898')
+        url = preprocess_url(
+            '/drautomation/v1/service_instances/123456d3-1122-3344-b67d-4389b44b7bf9/events/00116b2a-9326-4024-839e-fb5364b76898'
+        )
         mock_response = '{"action": "create", "api_source": "dr-automation-api", "event_id": "1cecfe43-43cd-4b1b-86be-30c2d3d2a25f", "level": "info", "message": "Service Instance created successfully", "message_data": {"anyKey": "anyValue"}, "metadata": {"anyKey": "anyValue"}, "resource": "ProvisionID", "time": "2025-06-23T07:12:49.840Z", "timestamp": "1750662769", "user": {"email": "abcuser@ibm.com", "name": "abcuser", "user_id": "IBMid-695000abc7E"}}'
         responses.add(
             responses.GET,
@@ -1739,7 +1741,9 @@ class TestGetEvent:
         test_get_event_value_error()
         """
         # Set up mock
-        url = preprocess_url('/drautomation/v1/service_instances/123456d3-1122-3344-b67d-4389b44b7bf9/events/00116b2a-9326-4024-839e-fb5364b76898')
+        url = preprocess_url(
+            '/drautomation/v1/service_instances/123456d3-1122-3344-b67d-4389b44b7bf9/events/00116b2a-9326-4024-839e-fb5364b76898'
+        )
         mock_response = '{"action": "create", "api_source": "dr-automation-api", "event_id": "1cecfe43-43cd-4b1b-86be-30c2d3d2a25f", "level": "info", "message": "Service Instance created successfully", "message_data": {"anyKey": "anyValue"}, "metadata": {"anyKey": "anyValue"}, "resource": "ProvisionID", "time": "2025-06-23T07:12:49.840Z", "timestamp": "1750662769", "user": {"email": "abcuser@ibm.com", "name": "abcuser", "user_id": "IBMid-695000abc7E"}}'
         responses.add(
             responses.GET,
@@ -1798,7 +1802,9 @@ class TestModel_DRStandbyWorkspace:
         # Construct dict forms of any model objects needed in order to build this model.
 
         details_dr_model = {}  # DetailsDr
-        details_dr_model['crn'] = 'crn:v1:bluemix:public:power-iaas:lon06:a/094f4214c75941f991da601b001df1fe:b6297e60-d0fe-4e24-8b15-276cf0645737::'
+        details_dr_model['crn'] = (
+            'crn:v1:bluemix:public:power-iaas:lon06:a/094f4214c75941f991da601b001df1fe:b6297e60-d0fe-4e24-8b15-276cf0645737::'
+        )
 
         location_dr_model = {}  # LocationDr
         location_dr_model['region'] = 'lon06'
@@ -1842,7 +1848,9 @@ class TestModel_DRWorkspace:
         # Construct dict forms of any model objects needed in order to build this model.
 
         details_dr_model = {}  # DetailsDr
-        details_dr_model['crn'] = 'crn:v1:bluemix:public:power-iaas:lon06:a/094f4214c75941f991da601b001df1fe:b6297e60-d0fe-4e24-8b15-276cf0645737::'
+        details_dr_model['crn'] = (
+            'crn:v1:bluemix:public:power-iaas:lon06:a/094f4214c75941f991da601b001df1fe:b6297e60-d0fe-4e24-8b15-276cf0645737::'
+        )
 
         location_dr_model = {}  # LocationDr
         location_dr_model['region'] = 'lon06'
@@ -1886,7 +1894,9 @@ class TestModel_DetailsDr:
 
         # Construct a json representation of a DetailsDr model
         details_dr_model_json = {}
-        details_dr_model_json['crn'] = 'crn:v1:bluemix:public:power-iaas:lon06:a/094f4214c75941f991da601b001df1fe:b6297e60-d0fe-4e24-8b15-276cf0645737::'
+        details_dr_model_json['crn'] = (
+            'crn:v1:bluemix:public:power-iaas:lon06:a/094f4214c75941f991da601b001df1fe:b6297e60-d0fe-4e24-8b15-276cf0645737::'
+        )
 
         # Construct a model instance of DetailsDr by calling from_dict on the json representation
         details_dr_model = DetailsDr.from_dict(details_dr_model_json)
@@ -1964,12 +1974,18 @@ class TestModel_DrAutomationGetSummaryResponse:
         dr_automation_get_summary_response_model_json['service_details'] = service_details_model
 
         # Construct a model instance of DrAutomationGetSummaryResponse by calling from_dict on the json representation
-        dr_automation_get_summary_response_model = DrAutomationGetSummaryResponse.from_dict(dr_automation_get_summary_response_model_json)
+        dr_automation_get_summary_response_model = DrAutomationGetSummaryResponse.from_dict(
+            dr_automation_get_summary_response_model_json
+        )
         assert dr_automation_get_summary_response_model != False
 
         # Construct a model instance of DrAutomationGetSummaryResponse by calling from_dict on the json representation
-        dr_automation_get_summary_response_model_dict = DrAutomationGetSummaryResponse.from_dict(dr_automation_get_summary_response_model_json).__dict__
-        dr_automation_get_summary_response_model2 = DrAutomationGetSummaryResponse(**dr_automation_get_summary_response_model_dict)
+        dr_automation_get_summary_response_model_dict = DrAutomationGetSummaryResponse.from_dict(
+            dr_automation_get_summary_response_model_json
+        ).__dict__
+        dr_automation_get_summary_response_model2 = DrAutomationGetSummaryResponse(
+            **dr_automation_get_summary_response_model_dict
+        )
 
         # Verify the model instances are equivalent
         assert dr_automation_get_summary_response_model == dr_automation_get_summary_response_model2
@@ -1992,7 +2008,9 @@ class TestModel_DrData:
         # Construct dict forms of any model objects needed in order to build this model.
 
         details_dr_model = {}  # DetailsDr
-        details_dr_model['crn'] = 'crn:v1:bluemix:public:power-iaas:lon06:a/094f4214c75941f991da601b001df1fe:b6297e60-d0fe-4e24-8b15-276cf0645737::'
+        details_dr_model['crn'] = (
+            'crn:v1:bluemix:public:power-iaas:lon06:a/094f4214c75941f991da601b001df1fe:b6297e60-d0fe-4e24-8b15-276cf0645737::'
+        )
 
         location_dr_model = {}  # LocationDr
         location_dr_model['region'] = 'lon06'
@@ -2222,7 +2240,9 @@ class TestModel_GetDrLocationsResponse:
         assert get_dr_locations_response_model != False
 
         # Construct a model instance of GetDrLocationsResponse by calling from_dict on the json representation
-        get_dr_locations_response_model_dict = GetDrLocationsResponse.from_dict(get_dr_locations_response_model_json).__dict__
+        get_dr_locations_response_model_dict = GetDrLocationsResponse.from_dict(
+            get_dr_locations_response_model_json
+        ).__dict__
         get_dr_locations_response_model2 = GetDrLocationsResponse(**get_dr_locations_response_model_dict)
 
         # Verify the model instances are equivalent
@@ -2248,11 +2268,15 @@ class TestModel_GetGRSLocationPairResponse:
         get_grs_location_pair_response_model_json['location_pairs'] = {'key1': 'testString'}
 
         # Construct a model instance of GetGRSLocationPairResponse by calling from_dict on the json representation
-        get_grs_location_pair_response_model = GetGRSLocationPairResponse.from_dict(get_grs_location_pair_response_model_json)
+        get_grs_location_pair_response_model = GetGRSLocationPairResponse.from_dict(
+            get_grs_location_pair_response_model_json
+        )
         assert get_grs_location_pair_response_model != False
 
         # Construct a model instance of GetGRSLocationPairResponse by calling from_dict on the json representation
-        get_grs_location_pair_response_model_dict = GetGRSLocationPairResponse.from_dict(get_grs_location_pair_response_model_json).__dict__
+        get_grs_location_pair_response_model_dict = GetGRSLocationPairResponse.from_dict(
+            get_grs_location_pair_response_model_json
+        ).__dict__
         get_grs_location_pair_response_model2 = GetGRSLocationPairResponse(**get_grs_location_pair_response_model_dict)
 
         # Verify the model instances are equivalent
@@ -2314,7 +2338,9 @@ class TestModel_MachineTypesByWorkspace:
         assert machine_types_by_workspace_model != False
 
         # Construct a model instance of MachineTypesByWorkspace by calling from_dict on the json representation
-        machine_types_by_workspace_model_dict = MachineTypesByWorkspace.from_dict(machine_types_by_workspace_model_json).__dict__
+        machine_types_by_workspace_model_dict = MachineTypesByWorkspace.from_dict(
+            machine_types_by_workspace_model_json
+        ).__dict__
         machine_types_by_workspace_model2 = MachineTypesByWorkspace(**machine_types_by_workspace_model_dict)
 
         # Verify the model instances are equivalent
@@ -2417,7 +2443,9 @@ class TestModel_OrchestratorDetails:
         # Construct a json representation of a OrchestratorDetails model
         orchestrator_details_model_json = {}
         orchestrator_details_model_json['last_updated_orchestrator_deployment_time'] = '2025-10-16T09:28:13.696000Z'
-        orchestrator_details_model_json['last_updated_standby_orchestrator_deployment_time'] = '2025-10-16T09:28:13.696000Z'
+        orchestrator_details_model_json['last_updated_standby_orchestrator_deployment_time'] = (
+            '2025-10-16T09:28:13.696000Z'
+        )
         orchestrator_details_model_json['latest_orchestrator_time'] = '2025-10-16T09:28:13.696000Z'
         orchestrator_details_model_json['location_id'] = 'testString'
         orchestrator_details_model_json['mfa_enabled'] = 'testString'
@@ -2511,15 +2539,21 @@ class TestModel_ServiceInstanceManageDR:
 
         # Construct a json representation of a ServiceInstanceManageDR model
         service_instance_manage_dr_model_json = {}
-        service_instance_manage_dr_model_json['dashboard_url'] = 'https://power-dra.test.cloud.ibm.com/power-dra-ui?instance_id=crn:v1:bluemix:public:power-dr-automation:us-south:a/fe3c2ccd058e407c81e1dba2b5c0e0d6:e3d09875-bbf8-4d8a-b52c-abefb67a53c5::'
-        service_instance_manage_dr_model_json['id'] = 'crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::'
+        service_instance_manage_dr_model_json['dashboard_url'] = (
+            'https://power-dra.cloud.ibm.com/power-dra-ui?instance_id=crn:v1:bluemix:public:power-dr-automation:us-south:a/fe3c2ccd058e407c81e1dba2b5c0e0d6:e3d09875-bbf8-4d8a-b52c-abefb67a53c5::'
+        )
+        service_instance_manage_dr_model_json['id'] = (
+            'crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::'
+        )
 
         # Construct a model instance of ServiceInstanceManageDR by calling from_dict on the json representation
         service_instance_manage_dr_model = ServiceInstanceManageDR.from_dict(service_instance_manage_dr_model_json)
         assert service_instance_manage_dr_model != False
 
         # Construct a model instance of ServiceInstanceManageDR by calling from_dict on the json representation
-        service_instance_manage_dr_model_dict = ServiceInstanceManageDR.from_dict(service_instance_manage_dr_model_json).__dict__
+        service_instance_manage_dr_model_dict = ServiceInstanceManageDR.from_dict(
+            service_instance_manage_dr_model_json
+        ).__dict__
         service_instance_manage_dr_model2 = ServiceInstanceManageDR(**service_instance_manage_dr_model_dict)
 
         # Verify the model instances are equivalent
@@ -2542,10 +2576,14 @@ class TestModel_ServiceInstanceStatus:
 
         # Construct a json representation of a ServiceInstanceStatus model
         service_instance_status_model_json = {}
-        service_instance_status_model_json['crn'] = 'crn:v1:staging:public:power-dr-automation:global:a/2c5d7270091f495795350e9adfa8399c:86e0c9a9-80f4-4fcf-88a0-07643de01bb8::'
+        service_instance_status_model_json['crn'] = (
+            'crn:v1:staging:public:power-dr-automation:global:a/2c5d7270091f495795350e9adfa8399c:86e0c9a9-80f4-4fcf-88a0-07643de01bb8::'
+        )
         service_instance_status_model_json['deployment_name'] = 'dr-deployment-instance-1'
         service_instance_status_model_json['last_updated_orchestrator_deployment_time'] = '2025-10-16T09:28:13.696000Z'
-        service_instance_status_model_json['last_updated_standby_orchestrator_deployment_time'] = '2025-10-16T09:28:13.696000Z'
+        service_instance_status_model_json['last_updated_standby_orchestrator_deployment_time'] = (
+            '2025-10-16T09:28:13.696000Z'
+        )
         service_instance_status_model_json['mfa_enabled'] = 'true'
         service_instance_status_model_json['orch_ext_connectivity_status'] = 'Connected'
         service_instance_status_model_json['orch_standby_node_addtion_status'] = 'Completed'
@@ -2558,7 +2596,9 @@ class TestModel_ServiceInstanceStatus:
         service_instance_status_model_json['primary_orchestrator_status'] = 'orchestrator-VM-creation-in-progress'
         service_instance_status_model_json['recovery_location'] = 'us-east'
         service_instance_status_model_json['resource_group'] = 'Default'
-        service_instance_status_model_json['standby_description'] = '1/4: Service instance is downloading orchestrator image for standby VM creation.'
+        service_instance_status_model_json['standby_description'] = (
+            '1/4: Service instance is downloading orchestrator image for standby VM creation.'
+        )
         service_instance_status_model_json['standby_ip_address'] = '192.168.1.11'
         service_instance_status_model_json['standby_status'] = 'downloading-orchestrator-image'
         service_instance_status_model_json['status'] = 'Running'
@@ -2568,7 +2608,9 @@ class TestModel_ServiceInstanceStatus:
         assert service_instance_status_model != False
 
         # Construct a model instance of ServiceInstanceStatus by calling from_dict on the json representation
-        service_instance_status_model_dict = ServiceInstanceStatus.from_dict(service_instance_status_model_json).__dict__
+        service_instance_status_model_dict = ServiceInstanceStatus.from_dict(
+            service_instance_status_model_json
+        ).__dict__
         service_instance_status_model2 = ServiceInstanceStatus(**service_instance_status_model_dict)
 
         # Verify the model instances are equivalent
@@ -2592,7 +2634,9 @@ class TestModel_ValidationKeyResponse:
         # Construct a json representation of a ValidationKeyResponse model
         validation_key_response_model_json = {}
         validation_key_response_model_json['description'] = 'Key is valid.'
-        validation_key_response_model_json['id'] = 'crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::'
+        validation_key_response_model_json['id'] = (
+            'crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::'
+        )
         validation_key_response_model_json['status'] = 'Active'
 
         # Construct a model instance of ValidationKeyResponse by calling from_dict on the json representation
@@ -2600,7 +2644,9 @@ class TestModel_ValidationKeyResponse:
         assert validation_key_response_model != False
 
         # Construct a model instance of ValidationKeyResponse by calling from_dict on the json representation
-        validation_key_response_model_dict = ValidationKeyResponse.from_dict(validation_key_response_model_json).__dict__
+        validation_key_response_model_dict = ValidationKeyResponse.from_dict(
+            validation_key_response_model_json
+        ).__dict__
         validation_key_response_model2 = ValidationKeyResponse(**validation_key_response_model_dict)
 
         # Verify the model instances are equivalent

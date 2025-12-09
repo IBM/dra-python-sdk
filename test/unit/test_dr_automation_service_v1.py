@@ -1523,7 +1523,7 @@ class TestListEvents:
         """
         # Set up mock
         url = preprocess_url('/drautomation/v1/service_instances/123456d3-1122-3344-b67d-4389b44b7bf9/events')
-        mock_response = '{"event": [{"action": "create", "api_source": "dr-automation-api", "event_id": "1cecfe43-43cd-4b1b-86be-30c2d3d2a25f", "level": "info", "message": "Service Instance created successfully", "message_data": {"anyKey": "anyValue"}, "metadata": {"anyKey": "anyValue"}, "resource": "ProvisionID", "time": "2025-06-23T07:12:49.840Z", "timestamp": "1750662769", "user": {"email": "abcuser@ibm.com", "name": "abcuser", "user_id": "IBMid-695000abc7E"}}]}'
+        mock_response = '{"events": [{"action": "create", "api_source": "dr-automation-api", "event_id": "1cecfe43-43cd-4b1b-86be-30c2d3d2a25f", "level": "info", "message": "Service Instance created successfully", "message_data": {"anyKey": "anyValue"}, "metadata": {"anyKey": "anyValue"}, "resource": "ProvisionID", "time": "2025-06-23T07:12:49.840Z", "timestamp": "1750662769", "user": {"email": "abcuser@ibm.com", "name": "abcuser", "user_id": "IBMid-695000abc7E"}}]}'
         responses.add(
             responses.GET,
             url,
@@ -1575,7 +1575,7 @@ class TestListEvents:
         """
         # Set up mock
         url = preprocess_url('/drautomation/v1/service_instances/123456d3-1122-3344-b67d-4389b44b7bf9/events')
-        mock_response = '{"event": [{"action": "create", "api_source": "dr-automation-api", "event_id": "1cecfe43-43cd-4b1b-86be-30c2d3d2a25f", "level": "info", "message": "Service Instance created successfully", "message_data": {"anyKey": "anyValue"}, "metadata": {"anyKey": "anyValue"}, "resource": "ProvisionID", "time": "2025-06-23T07:12:49.840Z", "timestamp": "1750662769", "user": {"email": "abcuser@ibm.com", "name": "abcuser", "user_id": "IBMid-695000abc7E"}}]}'
+        mock_response = '{"events": [{"action": "create", "api_source": "dr-automation-api", "event_id": "1cecfe43-43cd-4b1b-86be-30c2d3d2a25f", "level": "info", "message": "Service Instance created successfully", "message_data": {"anyKey": "anyValue"}, "metadata": {"anyKey": "anyValue"}, "resource": "ProvisionID", "time": "2025-06-23T07:12:49.840Z", "timestamp": "1750662769", "user": {"email": "abcuser@ibm.com", "name": "abcuser", "user_id": "IBMid-695000abc7E"}}]}'
         responses.add(
             responses.GET,
             url,
@@ -1613,7 +1613,7 @@ class TestListEvents:
         """
         # Set up mock
         url = preprocess_url('/drautomation/v1/service_instances/123456d3-1122-3344-b67d-4389b44b7bf9/events')
-        mock_response = '{"event": [{"action": "create", "api_source": "dr-automation-api", "event_id": "1cecfe43-43cd-4b1b-86be-30c2d3d2a25f", "level": "info", "message": "Service Instance created successfully", "message_data": {"anyKey": "anyValue"}, "metadata": {"anyKey": "anyValue"}, "resource": "ProvisionID", "time": "2025-06-23T07:12:49.840Z", "timestamp": "1750662769", "user": {"email": "abcuser@ibm.com", "name": "abcuser", "user_id": "IBMid-695000abc7E"}}]}'
+        mock_response = '{"events": [{"action": "create", "api_source": "dr-automation-api", "event_id": "1cecfe43-43cd-4b1b-86be-30c2d3d2a25f", "level": "info", "message": "Service Instance created successfully", "message_data": {"anyKey": "anyValue"}, "metadata": {"anyKey": "anyValue"}, "resource": "ProvisionID", "time": "2025-06-23T07:12:49.840Z", "timestamp": "1750662769", "user": {"email": "abcuser@ibm.com", "name": "abcuser", "user_id": "IBMid-695000abc7E"}}]}'
         responses.add(
             responses.GET,
             url,
@@ -2165,7 +2165,7 @@ class TestModel_EventCollection:
 
         # Construct a json representation of a EventCollection model
         event_collection_model_json = {}
-        event_collection_model_json['event'] = [event_model]
+        event_collection_model_json['events'] = [event_model]
 
         # Construct a model instance of EventCollection by calling from_dict on the json representation
         event_collection_model = EventCollection.from_dict(event_collection_model_json)

@@ -1542,28 +1542,28 @@ class EventCollection:
     """
     Container object holding a list of events.
 
-    :param List[Event] event: Events.
+    :param List[Event] events: Events.
     """
 
     def __init__(
         self,
-        event: List['Event'],
+        events: List['Event'],
     ) -> None:
         """
         Initialize a EventCollection object.
 
-        :param List[Event] event: Events.
+        :param List[Event] events: Events.
         """
-        self.event = event
+        self.events = events
 
     @classmethod
     def from_dict(cls, _dict: Dict) -> 'EventCollection':
         """Initialize a EventCollection object from a json dictionary."""
         args = {}
-        if (event := _dict.get('event')) is not None:
-            args['event'] = [Event.from_dict(v) for v in event]
+        if (events := _dict.get('events')) is not None:
+            args['events'] = [Event.from_dict(v) for v in events]
         else:
-            raise ValueError('Required property \'event\' not present in EventCollection JSON')
+            raise ValueError('Required property \'events\' not present in EventCollection JSON')
         return cls(**args)
 
     @classmethod
@@ -1574,14 +1574,14 @@ class EventCollection:
     def to_dict(self) -> Dict:
         """Return a json dictionary representing this model."""
         _dict = {}
-        if hasattr(self, 'event') and self.event is not None:
-            event_list = []
-            for v in self.event:
+        if hasattr(self, 'events') and self.events is not None:
+            events_list = []
+            for v in self.events:
                 if isinstance(v, dict):
-                    event_list.append(v)
+                    events_list.append(v)
                 else:
-                    event_list.append(v.to_dict())
-            _dict['event'] = event_list
+                    events_list.append(v.to_dict())
+            _dict['events'] = events_list
         return _dict
 
     def _to_dict(self):

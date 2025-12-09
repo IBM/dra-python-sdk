@@ -56,7 +56,7 @@ Service Name | Module Name | Imported Class Name
 To install, use `pip`:
 
 ```bash
-python -m pip install --upgrade dra_python_sdk
+python -m pip install --upgrade dra-python-sdk
 ```
 
 Then in your code, you can import the appropriate service like this:

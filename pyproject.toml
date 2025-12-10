@@ -1,6 +1,6 @@
 [project]
 name = "dra_python_sdk"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
     { name="IBM", email="Mani.Prasad.Arava@ibm.com" }
 ]

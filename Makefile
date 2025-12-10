@@ -4,7 +4,7 @@
 
 PYTHON=python3
 LINT=black
-LINT_DIRS=dra_python_sdk test/unit test/integration examples
+LINT_DIRS=ibm_dra_python_sdk test/unit test/integration examples
 
 setup: deps dev-deps install-project
 

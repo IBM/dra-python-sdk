@@ -19,7 +19,7 @@ Test methods in the common module
 """
 
 import unittest
-from dra_python_sdk import common
+from ibm_dra_python_sdk import common
 
 
 class TestCommon(unittest.TestCase):

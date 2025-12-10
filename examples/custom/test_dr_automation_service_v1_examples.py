@@ -21,7 +21,7 @@ Examples for DrAutomationServiceV1
 from ibm_cloud_sdk_core import ApiException, read_external_sources
 import os
 import pytest
-from dra_python_sdk.dr_automation_service_v1 import *
+from ibm_dra_python_sdk.dr_automation_service_v1 import *
 
 #
 # This file provides an example of how to use the DrAutomation Service service.
@@ -60,7 +60,8 @@ class TestDrAutomationServiceV1Examples:
 
             # begin-common
 
-            dr_automation_service_service = DrAutomationServiceV1.new_instance()
+            dr_automation_service_service = DrAutomationServiceV1.new_instance(
+            )
 
             # end-common
             assert dr_automation_service_service is not None
@@ -88,12 +89,13 @@ class TestDrAutomationServiceV1Examples:
             response = dr_automation_service_service.create_manage_dr(
                 instance_id='123456d3-1122-3344-b67d-4389b44b7bf9pyha1',
                 stand_by_redeploy='true',
+                
                 orchestrator_ha=True,
                 orchestrator_location_type='off-premises',
                 location_id='dal10',
                 orchestrator_workspace_id='75cbf05b-78f6-406e-afe7-a904f646d798',
                 orchestrator_name='drautomationprimarybypyh1105',
-                orchestrator_password='abcdefgh@123456',
+                orchestrator_password='EverytimeNewPassword@1',
                 machine_type='s922',
                 tier='tier1',
                 ssh_key_name='vijaykey',
@@ -103,10 +105,11 @@ class TestDrAutomationServiceV1Examples:
                 standby_orchestrator_workspace_id='71027b79-0e31-44f6-a499-63eca1a66feb',
                 standby_machine_type='s922',
                 standby_tier='tier1',
+
                 # MFA fields
-                client_id='123abcd-abcd-4b14-bf62-123456abcdef',
-                client_secret='abcdefgh123456abcdefg123456',
-                tenant_name='xxx.ibm.com',
+                client_id='123abcd-97d2-4b14-bf62-8eaecc67a122',
+                client_secret='abcdefgT5rS8wK6qR9dD7vF1hU4sA3bE2jG0pL9oX7yC',
+                tenant_name='xxx.ibm.com'
             )
             service_instance_manage_dr = response.get_result()
 
@@ -130,18 +133,19 @@ class TestDrAutomationServiceV1Examples:
             response = dr_automation_service_service.create_manage_dr(
                 instance_id='050ebe3b-13f4-4db8-8ece-501a3c13be80mh3',
                 stand_by_redeploy='false',
+                
                 # Body parameters
                 orchestrator_ha=True,
                 orchestrator_location_type='off-premises',
                 location_id='dal10',
                 orchestrator_workspace_id='75cbf05b-78f6-406e-afe7-a904f646d798',
                 orchestrator_name='drautomationprimarymh3',
-                orchestrator_password='abcdefgh@123456',
+                orchestrator_password='EverytimeNewPassword@1',
                 machine_type='s922',
                 tier='tier1',
                 guid='397dc20d-9f66-46dc-a750-d15392872023',
-                secret_group='12345-1234-1234-1234-1234abcd',
-                secret='abcd-1234-abcd-1234-1234abcd',
+                secret_group='12345-714f-86a6-6a50-2f128a4e7ac2',
+                secret='12345-997c-1d0d-5503-27ca856f2b5a',
                 region_id='us-south',
                 api_key='apikey is required',
                 # Standby fields (only for HA)
@@ -149,10 +153,11 @@ class TestDrAutomationServiceV1Examples:
                 standby_orchestrator_workspace_id='71027b79-0e31-44f6-a499-63eca1a66feb',
                 standby_machine_type='s922',
                 standby_tier='tier1',
+
                 # MFA fields
-                client_id='123abcd-abcd-4b14-bf62-123456abcdef',
-                client_secret='abcdefgh123456abcdefg123456',
-                tenant_name='xxx.ibm.com',
+                client_id='123abcd-97d2-4b14-bf62-8eaecc67a122',
+                client_secret='abcdefgT5rS8wK6qR9dD7vF1hU4sA3bE2jG0pL9oX7yC',
+                tenant_name='xxx.ibm.com'
             )
 
             service_instance_manage_dr = response.get_result()
@@ -177,21 +182,22 @@ class TestDrAutomationServiceV1Examples:
             response = dr_automation_service_service.create_manage_dr(
                 instance_id='050ebe3b-13f4-4db8-8ece-501a3c13be80mnh5',
                 stand_by_redeploy='false',
+                
                 # Body parameters
                 orchestrator_ha=False,
                 orchestrator_location_type='off-premises',
                 location_id='dal10',
                 orchestrator_workspace_id='75cbf05b-78f6-406e-afe7-a904f646d798',
                 orchestrator_name='drautomationprimarymnh5',
-                orchestrator_password='abcdefgh@123456',
+                orchestrator_password='EverytimeNewPassword@1',
                 machine_type='s922',
                 tier='tier1',
                 ssh_key_name='vijaykey',
                 api_key='apikey is required',
-                # MFA fields
-                client_id='123abcd-abcd-4b14-bf62-123456abcdef',
-                client_secret='abcdefgh123456abcdefg123456',
-                tenant_name='xxx.ibm.com',
+                 # MFA fields
+                client_id='123abcd-97d2-4b14-bf62-8eaecc67a122',
+                client_secret='abcdefgT5rS8wK6qR9dD7vF1hU4sA3bE2jG0pL9oX7yC',
+                tenant_name='xxx.ibm.com'
             )
 
             service_instance_manage_dr = response.get_result()
@@ -202,6 +208,7 @@ class TestDrAutomationServiceV1Examples:
 
         except ApiException as e:
             pytest.fail(str(e))
+
 
     @needscredentials
     def test_create_manage_dr_nonha_with_secrets_example(self):
@@ -216,26 +223,28 @@ class TestDrAutomationServiceV1Examples:
             response = dr_automation_service_service.create_manage_dr(
                 instance_id='050ebe3b-13f4-4db8-8ece-501a3c13be80mnh7',
                 stand_by_redeploy='false',
+                
                 # Body parameters
                 orchestrator_ha=False,
                 orchestrator_location_type='off-premises',
                 location_id='dal10',
                 orchestrator_workspace_id='75cbf05b-78f6-406e-afe7-a904f646d798',
                 orchestrator_name='drautomationprimarymnh7',
-                orchestrator_password='abcdefgh@123456',
+                orchestrator_password='EverytimeNewPassword@1',
                 machine_type='s922',
                 tier='tier1',
                 guid='397dc20d-9f66-46dc-a750-d15392872023',
-                secret_group='12345-1234-1234-1234-1234abcd',
-                secret='abcd-1234-abcd-1234-1234abcd',
+                secret_group='12345-714f-86a6-6a50-2f128a4e7ac2',
+                secret='12345-997c-1d0d-5503-27ca856f2b5a',
                 region_id='us-south',
                 api_key='apikey is required',
-                # MFA fields
-                client_id='123abcd-abcd-4b14-bf62-123456abcdef',
-                client_secret='abcdefgh123456abcdefg123456',
-                tenant_name='xxx.ibm.com',
+                 # MFA fields
+                client_id='123abcd-97d2-4b14-bf62-8eaecc67a122',
+                client_secret='abcdefgT5rS8wK6qR9dD7vF1hU4sA3bE2jG0pL9oX7yC',
+                tenant_name='xxx.ibm.com'
             )
 
+        
             service_instance_manage_dr = response.get_result()
 
             print(json.dumps(service_instance_manage_dr, indent=2))

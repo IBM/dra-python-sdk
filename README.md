@@ -41,7 +41,7 @@ IBM Cloud services:
 
 Service Name | Module Name | Imported Class Name
 --- | ---| ---
-[DrAutomation Service](https://cloud.ibm.com/apidocs/dr-automation-powervs) | dra_python_sdk.dr_automation_service_v1 | DrAutomationServiceV1
+[DrAutomation Service](https://cloud.ibm.com/apidocs/dr-automation-powervs) | ibm_dra_python_sdk.dr_automation_service_v1 | DrAutomationServiceV1
 
 ## Prerequisites
 
@@ -56,12 +56,12 @@ Service Name | Module Name | Imported Class Name
 To install, use `pip`:
 
 ```bash
-python -m pip install --upgrade dra-python-sdk
+python -m pip install --upgrade ibm-dra-python-sdk
 ```
 
 Then in your code, you can import the appropriate service like this:
 ```
-from dra_python_sdk.dr_automation_service_v1 import *
+from ibm_dra_python_sdk.dr_automation_service_v1 import *
 ```
 where `dr_automation_service_v1` is the service's module name from the table above
 

@@ -20,7 +20,7 @@ Integration Tests for DrAutomationServiceV1
 from ibm_cloud_sdk_core import *
 import os
 import pytest
-from dra_python_sdk.dr_automation_service_v1 import *
+from ibm_dra_python_sdk.dr_automation_service_v1 import *
 
 # Config file name
 config_file = 'dr_automation_service_v1.env'
@@ -36,7 +36,8 @@ class TestDrAutomationServiceV1:
         if os.path.exists(config_file):
             os.environ['IBM_CREDENTIALS_FILE'] = config_file
 
-            cls.dr_automation_service_service = DrAutomationServiceV1.new_instance()
+            cls.dr_automation_service_service = DrAutomationServiceV1.new_instance(
+            )
             assert cls.dr_automation_service_service is not None
 
             cls.config = read_external_sources(DrAutomationServiceV1.DEFAULT_SERVICE_NAME)

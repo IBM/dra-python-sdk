@@ -43,7 +43,7 @@ from .common import get_sdk_headers
 class DrAutomationServiceV1(BaseService):
     """The DrAutomation Service V1 service."""
 
-    DEFAULT_SERVICE_URL = 'https://power-dra.test.cloud.ibm.com'
+    DEFAULT_SERVICE_URL = 'https://power-dra.cloud.ibm.com'
     DEFAULT_SERVICE_NAME = 'dr_automation_service'
 
     @classmethod

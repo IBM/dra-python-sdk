@@ -33,7 +33,7 @@ from ibm_dra_python_sdk.dr_automation_service_v1 import *
 
 _service = DrAutomationServiceV1(authenticator=NoAuthAuthenticator())
 
-_base_url = 'https://power-dra.test.cloud.ibm.com'
+_base_url = 'https://power-dra.cloud.ibm.com'
 _service.set_service_url(_base_url)
 
 
@@ -1023,7 +1023,7 @@ class TestCreateManageDr:
         """
         # Set up mock
         url = preprocess_url('/drautomation/v1/manage_dr/123456d3-1122-3344-b67d-4389b44b7bf9')
-        mock_response = '{"dashboard_url": "https://power-dra.test.cloud.ibm.com/power-dra-ui?instance_id=crn:v1:bluemix:public:power-dr-automation:us-south:a/fe3c2ccd058e407c81e1dba2b5c0e0d6:e3d09875-bbf8-4d8a-b52c-abefb67a53c5::", "id": "crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::"}'
+        mock_response = '{"dashboard_url": "https://power-dra.cloud.ibm.com/power-dra-ui?instance_id=crn:v1:bluemix:public:power-dr-automation:us-south:a/fe3c2ccd058e407c81e1dba2b5c0e0d6:e3d09875-bbf8-4d8a-b52c-abefb67a53c5::", "id": "crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::"}'
         responses.add(
             responses.POST,
             url,
@@ -1143,7 +1143,7 @@ class TestCreateManageDr:
         """
         # Set up mock
         url = preprocess_url('/drautomation/v1/manage_dr/123456d3-1122-3344-b67d-4389b44b7bf9')
-        mock_response = '{"dashboard_url": "https://power-dra.test.cloud.ibm.com/power-dra-ui?instance_id=crn:v1:bluemix:public:power-dr-automation:us-south:a/fe3c2ccd058e407c81e1dba2b5c0e0d6:e3d09875-bbf8-4d8a-b52c-abefb67a53c5::", "id": "crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::"}'
+        mock_response = '{"dashboard_url": "https://power-dra.cloud.ibm.com/power-dra-ui?instance_id=crn:v1:bluemix:public:power-dr-automation:us-south:a/fe3c2ccd058e407c81e1dba2b5c0e0d6:e3d09875-bbf8-4d8a-b52c-abefb67a53c5::", "id": "crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::"}'
         responses.add(
             responses.POST,
             url,
@@ -1252,7 +1252,7 @@ class TestCreateManageDr:
         """
         # Set up mock
         url = preprocess_url('/drautomation/v1/manage_dr/123456d3-1122-3344-b67d-4389b44b7bf9')
-        mock_response = '{"dashboard_url": "https://power-dra.test.cloud.ibm.com/power-dra-ui?instance_id=crn:v1:bluemix:public:power-dr-automation:us-south:a/fe3c2ccd058e407c81e1dba2b5c0e0d6:e3d09875-bbf8-4d8a-b52c-abefb67a53c5::", "id": "crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::"}'
+        mock_response = '{"dashboard_url": "https://power-dra.cloud.ibm.com/power-dra-ui?instance_id=crn:v1:bluemix:public:power-dr-automation:us-south:a/fe3c2ccd058e407c81e1dba2b5c0e0d6:e3d09875-bbf8-4d8a-b52c-abefb67a53c5::", "id": "crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::"}'
         responses.add(
             responses.POST,
             url,
@@ -2540,7 +2540,7 @@ class TestModel_ServiceInstanceManageDR:
         # Construct a json representation of a ServiceInstanceManageDR model
         service_instance_manage_dr_model_json = {}
         service_instance_manage_dr_model_json['dashboard_url'] = (
-            'https://power-dra.test.cloud.ibm.com/power-dra-ui?instance_id=crn:v1:bluemix:public:power-dr-automation:us-south:a/fe3c2ccd058e407c81e1dba2b5c0e0d6:e3d09875-bbf8-4d8a-b52c-abefb67a53c5::'
+            'https://power-dra.cloud.ibm.com/power-dra-ui?instance_id=crn:v1:bluemix:public:power-dr-automation:us-south:a/fe3c2ccd058e407c81e1dba2b5c0e0d6:e3d09875-bbf8-4d8a-b52c-abefb67a53c5::'
         )
         service_instance_manage_dr_model_json['id'] = (
             'crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::'

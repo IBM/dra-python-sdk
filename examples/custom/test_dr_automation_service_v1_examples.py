@@ -21,7 +21,7 @@ Examples for DrAutomationServiceV1
 from ibm_cloud_sdk_core import ApiException, read_external_sources
 import os
 import pytest
-from dra_python_sdk.dr_automation_service_v1 import *
+from ibm_dra_python_sdk.dr_automation_service_v1 import *
 
 #
 # This file provides an example of how to use the DrAutomation Service service.
@@ -93,7 +93,7 @@ class TestDrAutomationServiceV1Examples:
                 location_id='dal10',
                 orchestrator_workspace_id='75cbf05b-78f6-406e-afe7-a904f646d798',
                 orchestrator_name='drautomationprimarybypyh1105',
-                orchestrator_password='abcdefgh@123456',
+                orchestrator_password='EverytimeNewPassword@1',
                 machine_type='s922',
                 tier='tier1',
                 ssh_key_name='vijaykey',
@@ -104,8 +104,8 @@ class TestDrAutomationServiceV1Examples:
                 standby_machine_type='s922',
                 standby_tier='tier1',
                 # MFA fields
-                client_id='123abcd-abcd-4b14-bf62-123456abcdef',
-                client_secret='abcdefgh123456abcdefg123456',
+                client_id='123abcd-97d2-4b14-bf62-8eaecc67a122',
+                client_secret='abcdefgT5rS8wK6qR9dD7vF1hU4sA3bE2jG0pL9oX7yC',
                 tenant_name='xxx.ibm.com',
             )
             service_instance_manage_dr = response.get_result()
@@ -136,12 +136,12 @@ class TestDrAutomationServiceV1Examples:
                 location_id='dal10',
                 orchestrator_workspace_id='75cbf05b-78f6-406e-afe7-a904f646d798',
                 orchestrator_name='drautomationprimarymh3',
-                orchestrator_password='abcdefgh@123456',
+                orchestrator_password='EverytimeNewPassword@1',
                 machine_type='s922',
                 tier='tier1',
                 guid='397dc20d-9f66-46dc-a750-d15392872023',
-                secret_group='12345-1234-1234-1234-1234abcd',
-                secret='abcd-1234-abcd-1234-1234abcd',
+                secret_group='12345-5678-1234-5678-1234abcd',
+                secret='12345-abcd-1234-abcd-1234abcd',
                 region_id='us-south',
                 api_key='apikey is required',
                 # Standby fields (only for HA)
@@ -150,8 +150,8 @@ class TestDrAutomationServiceV1Examples:
                 standby_machine_type='s922',
                 standby_tier='tier1',
                 # MFA fields
-                client_id='123abcd-abcd-4b14-bf62-123456abcdef',
-                client_secret='abcdefgh123456abcdefg123456',
+                client_id='123abcd-97d2-4b14-bf62-8eaecc67a122',
+                client_secret='abcdefgT5rS8wK6qR9dD7vF1hU4sA3bE2jG0pL9oX7yC',
                 tenant_name='xxx.ibm.com',
             )
 
@@ -183,14 +183,14 @@ class TestDrAutomationServiceV1Examples:
                 location_id='dal10',
                 orchestrator_workspace_id='75cbf05b-78f6-406e-afe7-a904f646d798',
                 orchestrator_name='drautomationprimarymnh5',
-                orchestrator_password='abcdefgh@123456',
+                orchestrator_password='EverytimeNewPassword@1',
                 machine_type='s922',
                 tier='tier1',
                 ssh_key_name='vijaykey',
                 api_key='apikey is required',
                 # MFA fields
-                client_id='123abcd-abcd-4b14-bf62-123456abcdef',
-                client_secret='abcdefgh123456abcdefg123456',
+                client_id='123abcd-97d2-4b14-bf62-8eaecc67a122',
+                client_secret='abcdefgT5rS8wK6qR9dD7vF1hU4sA3bE2jG0pL9oX7yC',
                 tenant_name='xxx.ibm.com',
             )
 
@@ -222,17 +222,17 @@ class TestDrAutomationServiceV1Examples:
                 location_id='dal10',
                 orchestrator_workspace_id='75cbf05b-78f6-406e-afe7-a904f646d798',
                 orchestrator_name='drautomationprimarymnh7',
-                orchestrator_password='abcdefgh@123456',
+                orchestrator_password='EverytimeNewPassword@1',
                 machine_type='s922',
                 tier='tier1',
                 guid='397dc20d-9f66-46dc-a750-d15392872023',
-                secret_group='12345-1234-1234-1234-1234abcd',
-                secret='abcd-1234-abcd-1234-1234abcd',
+                secret_group='12345-5678-1234-5678-1234abcd',
+                secret='12345-abcd-1234-abcd-1234abcd',
                 region_id='us-south',
                 api_key='apikey is required',
                 # MFA fields
-                client_id='123abcd-abcd-4b14-bf62-123456abcdef',
-                client_secret='abcdefgh123456abcdefg123456',
+                client_id='123abcd-97d2-4b14-bf62-8eaecc67a122',
+                client_secret='abcdefgT5rS8wK6qR9dD7vF1hU4sA3bE2jG0pL9oX7yC',
                 tenant_name='xxx.ibm.com',
             )
 

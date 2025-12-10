@@ -28,7 +28,7 @@ import re
 import requests
 import responses
 import urllib
-from dra_python_sdk.dr_automation_service_v1 import *
+from ibm_dra_python_sdk.dr_automation_service_v1 import *
 
 
 _service = DrAutomationServiceV1(authenticator=NoAuthAuthenticator())

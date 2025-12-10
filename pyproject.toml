@@ -1,6 +1,6 @@
 [project]
-name = "dra_python_sdk"
-version = "0.0.2"
+name = "ibm_dra_python_sdk"
+version = "0.0.1"
 authors = [
     { name="IBM", email="Mani.Prasad.Arava@ibm.com" }
 ]
@@ -56,7 +56,7 @@ requires = ["setuptools>=67.7.2"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-packages = ["dra_python_sdk"]
+packages = ["ibm_dra_python_sdk"]
 
 [tool.black]
 line-length = 120

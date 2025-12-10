@@ -20,7 +20,7 @@ Examples for DrAutomationServiceV1
 from ibm_cloud_sdk_core import ApiException, read_external_sources
 import os
 import pytest
-from dra_python_sdk.dr_automation_service_v1 import *
+from ibm_dra_python_sdk.dr_automation_service_v1 import *
 
 #
 # This file provides an example of how to use the DrAutomation Service service.
@@ -249,7 +249,7 @@ class TestDrAutomationServiceV1Examples:
                 machine_type='s922',
                 orchestrator_location_type='off-premises',
                 orchestrator_name='drautomationprimarybypyh1105',
-                orchestrator_password='abcdefgh@123456',
+                orchestrator_password='EverytimeNewPassword@1',
                 orchestrator_workspace_id='75cbf05b-78f6-406e-afe7-a904f646d798',
                 # Optional parameters (but commonly used)
                 api_key='apikey should pass',
@@ -262,8 +262,8 @@ class TestDrAutomationServiceV1Examples:
                 standby_machine_type='s922',
                 standby_tier='tier1',
                 # MFA fields (optional)
-                client_id='123abcd-abcd-4b14-bf62-123456abcdef',
-                client_secret='abcdefgh123456abcdefg123456',
+                client_id='123abcd-97d2-4b14-bf62-8eaecc67a122',
+                client_secret='abcdefgT5rS8wK6qR9dD7vF1hU4sA3bE2jG0pL9oX7yC',
                 tenant_name='xxx.ibm.com',
             )
 
@@ -309,10 +309,9 @@ class TestDrAutomationServiceV1Examples:
             # begin-list_events
 
             response = dr_automation_service_service.list_events(
-                instance_id='123456d3-1122-3344-b67d-4389b44b7bf9',
-                time='2025-06-19T23:59:59Z',
-                from_time='2025-06-19T00:00:00Z',
-                to_time='2025-06-19T23:59:59Z',
+                instance_id='df6b8951-5442-44e9-a2a4-399923e5678j29d',
+                from_time='2025-12-02T03:10:00Z',
+                to_time='2025-12-09T23:59:59Z',
             )
             event_collection = response.get_result()
 
@@ -334,8 +333,8 @@ class TestDrAutomationServiceV1Examples:
             # begin-get_event
 
             response = dr_automation_service_service.get_event(
-                instance_id='123456d3-1122-3344-b67d-4389b44b7bf9',
-                event_id='00116b2a-9326-4024-839e-fb5364b76898',
+                instance_id='df6b8951-5442-44e9-a2a4-399923e5678j29d',
+                event_id='df6b8951-5442-44e9-a2a4-399923e5678j29d-1764680961045247391',
             )
             event = response.get_result()
 

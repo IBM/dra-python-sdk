@@ -144,8 +144,8 @@ class TestDrAutomationServiceV1Examples:
                 machine_type='s922',
                 tier='tier1',
                 guid='397dc20d-9f66-46dc-a750-d15392872023',
-                secret_group='12345-714f-86a6-6a50-2f128a4e7ac2',
-                secret='12345-997c-1d0d-5503-27ca856f2b5a',
+                secret_group='12345-5678-1234-5678-1234abcd',
+                secret='12345-abcd-1234-abcd-1234abcd',
                 region_id='us-south',
                 api_key='apikey is required',
                 # Standby fields (only for HA)
@@ -234,8 +234,8 @@ class TestDrAutomationServiceV1Examples:
                 machine_type='s922',
                 tier='tier1',
                 guid='397dc20d-9f66-46dc-a750-d15392872023',
-                secret_group='12345-714f-86a6-6a50-2f128a4e7ac2',
-                secret='12345-997c-1d0d-5503-27ca856f2b5a',
+                secret_group='12345-5678-1234-5678-1234abcd',
+                secret='12345-abcd-1234-abcd-1234abcd',
                 region_id='us-south',
                 api_key='apikey is required',
                  # MFA fields

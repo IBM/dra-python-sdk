@@ -60,8 +60,7 @@ class TestDrAutomationServiceV1Examples:
 
             # begin-common
 
-            dr_automation_service_service = DrAutomationServiceV1.new_instance(
-            )
+            dr_automation_service_service = DrAutomationServiceV1.new_instance()
 
             # end-common
             assert dr_automation_service_service is not None
@@ -89,7 +88,6 @@ class TestDrAutomationServiceV1Examples:
             response = dr_automation_service_service.create_manage_dr(
                 instance_id='123456d3-1122-3344-b67d-4389b44b7bf9pyha1',
                 stand_by_redeploy='true',
-                
                 orchestrator_ha=True,
                 orchestrator_location_type='off-premises',
                 location_id='dal10',
@@ -105,11 +103,10 @@ class TestDrAutomationServiceV1Examples:
                 standby_orchestrator_workspace_id='71027b79-0e31-44f6-a499-63eca1a66feb',
                 standby_machine_type='s922',
                 standby_tier='tier1',
-
                 # MFA fields
                 client_id='123abcd-97d2-4b14-bf62-8eaecc67a122',
                 client_secret='abcdefgT5rS8wK6qR9dD7vF1hU4sA3bE2jG0pL9oX7yC',
-                tenant_name='xxx.ibm.com'
+                tenant_name='xxx.ibm.com',
             )
             service_instance_manage_dr = response.get_result()
 
@@ -133,7 +130,6 @@ class TestDrAutomationServiceV1Examples:
             response = dr_automation_service_service.create_manage_dr(
                 instance_id='050ebe3b-13f4-4db8-8ece-501a3c13be80mh3',
                 stand_by_redeploy='false',
-                
                 # Body parameters
                 orchestrator_ha=True,
                 orchestrator_location_type='off-premises',
@@ -153,11 +149,10 @@ class TestDrAutomationServiceV1Examples:
                 standby_orchestrator_workspace_id='71027b79-0e31-44f6-a499-63eca1a66feb',
                 standby_machine_type='s922',
                 standby_tier='tier1',
-
                 # MFA fields
                 client_id='123abcd-97d2-4b14-bf62-8eaecc67a122',
                 client_secret='abcdefgT5rS8wK6qR9dD7vF1hU4sA3bE2jG0pL9oX7yC',
-                tenant_name='xxx.ibm.com'
+                tenant_name='xxx.ibm.com',
             )
 
             service_instance_manage_dr = response.get_result()
@@ -182,7 +177,6 @@ class TestDrAutomationServiceV1Examples:
             response = dr_automation_service_service.create_manage_dr(
                 instance_id='050ebe3b-13f4-4db8-8ece-501a3c13be80mnh5',
                 stand_by_redeploy='false',
-                
                 # Body parameters
                 orchestrator_ha=False,
                 orchestrator_location_type='off-premises',
@@ -194,10 +188,10 @@ class TestDrAutomationServiceV1Examples:
                 tier='tier1',
                 ssh_key_name='vijaykey',
                 api_key='apikey is required',
-                 # MFA fields
+                # MFA fields
                 client_id='123abcd-97d2-4b14-bf62-8eaecc67a122',
                 client_secret='abcdefgT5rS8wK6qR9dD7vF1hU4sA3bE2jG0pL9oX7yC',
-                tenant_name='xxx.ibm.com'
+                tenant_name='xxx.ibm.com',
             )
 
             service_instance_manage_dr = response.get_result()
@@ -208,7 +202,6 @@ class TestDrAutomationServiceV1Examples:
 
         except ApiException as e:
             pytest.fail(str(e))
-
 
     @needscredentials
     def test_create_manage_dr_nonha_with_secrets_example(self):
@@ -223,7 +216,6 @@ class TestDrAutomationServiceV1Examples:
             response = dr_automation_service_service.create_manage_dr(
                 instance_id='050ebe3b-13f4-4db8-8ece-501a3c13be80mnh7',
                 stand_by_redeploy='false',
-                
                 # Body parameters
                 orchestrator_ha=False,
                 orchestrator_location_type='off-premises',
@@ -238,13 +230,12 @@ class TestDrAutomationServiceV1Examples:
                 secret='12345-abcd-1234-abcd-1234abcd',
                 region_id='us-south',
                 api_key='apikey is required',
-                 # MFA fields
+                # MFA fields
                 client_id='123abcd-97d2-4b14-bf62-8eaecc67a122',
                 client_secret='abcdefgT5rS8wK6qR9dD7vF1hU4sA3bE2jG0pL9oX7yC',
-                tenant_name='xxx.ibm.com'
+                tenant_name='xxx.ibm.com',
             )
 
-        
             service_instance_manage_dr = response.get_result()
 
             print(json.dumps(service_instance_manage_dr, indent=2))

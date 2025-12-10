@@ -36,8 +36,7 @@ class TestDrAutomationServiceV1:
         if os.path.exists(config_file):
             os.environ['IBM_CREDENTIALS_FILE'] = config_file
 
-            cls.dr_automation_service_service = DrAutomationServiceV1.new_instance(
-            )
+            cls.dr_automation_service_service = DrAutomationServiceV1.new_instance()
             assert cls.dr_automation_service_service is not None
 
             cls.config = read_external_sources(DrAutomationServiceV1.DEFAULT_SERVICE_NAME)

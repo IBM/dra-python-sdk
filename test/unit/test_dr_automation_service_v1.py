@@ -894,7 +894,7 @@ class TestGetPowervsWorkspaces:
         """
         # Set up mock
         url = preprocess_url('/drautomation/v1/powervs_workspaces/123456d3-1122-3344-b67d-4389b44b7bf9')
-        mock_response = '{"dr_standby_workspace_description": "anyValue", "dr_standby_workspaces": [{"details": {"crn": "crn:v1:bluemix:public:power-iaas:lon06:a/094f4214c75941f991da601b001df1fe:b6297e60-d0fe-4e24-8b15-276cf0645737::"}, "id": "id", "location": {"region": "lon06", "type": "data-center", "url": "https://lon.power-iaas.cloud.ibm.com"}, "name": "name", "status": "status"}], "dr_workspace_description": "anyValue", "dr_workspaces": [{"default": true, "details": {"crn": "crn:v1:bluemix:public:power-iaas:lon06:a/094f4214c75941f991da601b001df1fe:b6297e60-d0fe-4e24-8b15-276cf0645737::"}, "id": "id", "location": {"region": "lon06", "type": "data-center", "url": "https://lon.power-iaas.cloud.ibm.com"}, "name": "name", "status": "active"}]}'
+        mock_response = '{"dr_standby_workspace_description": "anyValue", "dr_standby_workspaces": [{"details": {"crn": "crn:v1:bluemix:public:power-iaas:lon06:a/9876543211f991da6012345678a:baq1sw2de3fr4-4e24-8b15-qwerty123456::"}, "id": "id", "location": {"region": "lon06", "type": "data-center", "url": "https://lon.power-iaas.cloud.ibm.com"}, "name": "name", "status": "status"}], "dr_workspace_description": "anyValue", "dr_workspaces": [{"default": true, "details": {"crn": "crn:v1:bluemix:public:power-iaas:lon06:a/9876543211f991da6012345678a:baq1sw2de3fr4-4e24-8b15-qwerty123456::"}, "id": "id", "location": {"region": "lon06", "type": "data-center", "url": "https://lon.power-iaas.cloud.ibm.com"}, "name": "name", "status": "active"}]}'
         responses.add(
             responses.GET,
             url,
@@ -938,7 +938,7 @@ class TestGetPowervsWorkspaces:
         """
         # Set up mock
         url = preprocess_url('/drautomation/v1/powervs_workspaces/123456d3-1122-3344-b67d-4389b44b7bf9')
-        mock_response = '{"dr_standby_workspace_description": "anyValue", "dr_standby_workspaces": [{"details": {"crn": "crn:v1:bluemix:public:power-iaas:lon06:a/094f4214c75941f991da601b001df1fe:b6297e60-d0fe-4e24-8b15-276cf0645737::"}, "id": "id", "location": {"region": "lon06", "type": "data-center", "url": "https://lon.power-iaas.cloud.ibm.com"}, "name": "name", "status": "status"}], "dr_workspace_description": "anyValue", "dr_workspaces": [{"default": true, "details": {"crn": "crn:v1:bluemix:public:power-iaas:lon06:a/094f4214c75941f991da601b001df1fe:b6297e60-d0fe-4e24-8b15-276cf0645737::"}, "id": "id", "location": {"region": "lon06", "type": "data-center", "url": "https://lon.power-iaas.cloud.ibm.com"}, "name": "name", "status": "active"}]}'
+        mock_response = '{"dr_standby_workspace_description": "anyValue", "dr_standby_workspaces": [{"details": {"crn": "crn:v1:bluemix:public:power-iaas:lon06:a/9876543211f991da6012345678a:baq1sw2de3fr4-4e24-8b15-qwerty123456::"}, "id": "id", "location": {"region": "lon06", "type": "data-center", "url": "https://lon.power-iaas.cloud.ibm.com"}, "name": "name", "status": "status"}], "dr_workspace_description": "anyValue", "dr_workspaces": [{"default": true, "details": {"crn": "crn:v1:bluemix:public:power-iaas:lon06:a/9876543211f991da6012345678a:baq1sw2de3fr4-4e24-8b15-qwerty123456::"}, "id": "id", "location": {"region": "lon06", "type": "data-center", "url": "https://lon.power-iaas.cloud.ibm.com"}, "name": "name", "status": "active"}]}'
         responses.add(
             responses.GET,
             url,
@@ -1881,7 +1881,7 @@ class TestModel_DRStandbyWorkspace:
 
         details_dr_model = {}  # DetailsDr
         details_dr_model['crn'] = (
-            'crn:v1:bluemix:public:power-iaas:lon06:a/094f4214c75941f991da601b001df1fe:b6297e60-d0fe-4e24-8b15-276cf0645737::'
+            'crn:v1:bluemix:public:power-iaas:lon06:a/9876543211f991da6012345678a:baq1sw2de3fr4-4e24-8b15-qwerty123456::'
         )
 
         location_dr_model = {}  # LocationDr
@@ -1927,7 +1927,7 @@ class TestModel_DRWorkspace:
 
         details_dr_model = {}  # DetailsDr
         details_dr_model['crn'] = (
-            'crn:v1:bluemix:public:power-iaas:lon06:a/094f4214c75941f991da601b001df1fe:b6297e60-d0fe-4e24-8b15-276cf0645737::'
+            'crn:v1:bluemix:public:power-iaas:lon06:a/9876543211f991da6012345678a:baq1sw2de3fr4-4e24-8b15-qwerty123456::'
         )
 
         location_dr_model = {}  # LocationDr
@@ -1973,7 +1973,7 @@ class TestModel_DetailsDr:
         # Construct a json representation of a DetailsDr model
         details_dr_model_json = {}
         details_dr_model_json['crn'] = (
-            'crn:v1:bluemix:public:power-iaas:lon06:a/094f4214c75941f991da601b001df1fe:b6297e60-d0fe-4e24-8b15-276cf0645737::'
+            'crn:v1:bluemix:public:power-iaas:lon06:a/9876543211f991da6012345678a:baq1sw2de3fr4-4e24-8b15-qwerty123456::'
         )
 
         # Construct a model instance of DetailsDr by calling from_dict on the json representation
@@ -2088,7 +2088,7 @@ class TestModel_DrData:
 
         details_dr_model = {}  # DetailsDr
         details_dr_model['crn'] = (
-            'crn:v1:bluemix:public:power-iaas:lon06:a/094f4214c75941f991da601b001df1fe:b6297e60-d0fe-4e24-8b15-276cf0645737::'
+            'crn:v1:bluemix:public:power-iaas:lon06:a/9876543211f991da6012345678a:baq1sw2de3fr4-4e24-8b15-qwerty123456::'
         )
 
         location_dr_model = {}  # LocationDr

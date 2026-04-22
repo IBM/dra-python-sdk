@@ -102,7 +102,7 @@ class TestResourceControllerV2Examples:
             # Use the instance GUID from create step OR hardcode one
             instance_guid = globals().get(
                 "created_instance_guid",
-                "crn:v1:bluemix:public:power-dr-automation:us-east:a/12345674d444c9bd95efca704cf033:a19b6293-9f76-46d8-81b0-7a443db51887::",
+                "crn:v1:bluemix:public:power-dr-automation:us-east:a/123456991da601b001df1fe:sdfghij-a1a2a3-321a-aaf6-qwerty12345::",
             )
 
             print(f"\nDeleting resource instance: {instance_guid}")

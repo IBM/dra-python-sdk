@@ -39,9 +39,10 @@ Changes might occur which impact applications that use this SDK.
 The IBM Cloud DrAutomation services Python SDK allows developers to programmatically interact with the following
 IBM Cloud services:
 
-Service Name | Module Name | Imported Class Name
+Service Name - Plan | Module Name | Imported Class Name
 --- | ---| ---
 [DrAutomation Service](https://cloud.ibm.com/apidocs/dr-automation-powervs) | ibm_dra_python_sdk.dr_automation_service_v1 | DrAutomationServiceV1
+[PowerHA Service](https://cloud.ibm.com/apidocs/dr-automation-powervs) | ibm_dra_python_sdk.powerha_automation_service_v1 | PowerhaAutomationServiceV1
 
 ## Prerequisites
 
@@ -60,10 +61,16 @@ python -m pip install --upgrade ibm-dra-python-sdk
 ```
 
 Then in your code, you can import the appropriate service like this:
+#### Example – DrAutomation Service-Plan
 ```
 from ibm_dra_python_sdk.dr_automation_service_v1 import *
 ```
 where `dr_automation_service_v1` is the service's module name from the table above
+#### Example – PowerHA Service-Plan
+```
+from ibm_dra_python_sdk.powerha_automation_service_v1 import *
+```
+where `powerha_automation_service_v1` is the service's module name from the table above
 
 ## Using the SDK
 For general SDK usage information, please see [this link](https://github.com/IBM/ibm-cloud-sdk-common/blob/main/README.md)
@@ -71,16 +78,21 @@ For general SDK usage information, please see [this link](https://github.com/IBM
 ### Environment Configuration
 
 The SDK can be configured using environment variables. Here's an example configuration:
-
+#### DrAutomation Service Configuration
 ```bash
-# Service URL (for development/testing)
-export DR_AUTOMATION_SERVICE_URL=https://power-dra.cloud.ibm.com
-
 # Authentication type
 export DR_AUTOMATION_SERVICE_AUTH_TYPE=bearerToken
 
 # Bearer token for authentication
-export DR_AUTOMATION_SERVICE_BEARER_TOKEN=eyJraWQiOiIyMDE5MD......
+export DR_AUTOMATION_SERVICE_BEARER_TOKEN=<bearerToken>
+```
+#### PowerHA Service Configuration
+```bash
+# Authentication type
+export POWERHA_AUTOMATION_SERVICE_AUTH_TYPE=bearerToken
+
+# Bearer token for authentication
+export POWERHA_AUTOMATION_SERVICE_BEARER_TOKEN=<bearerToken>
 ```
 
 **Note:** The bearer token shown above is an example. For production use:

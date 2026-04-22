@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# (C) Copyright IBM Corp. 2025.
+# (C) Copyright IBM Corp. 2026.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -29,7 +29,6 @@ import requests
 import responses
 import urllib
 from ibm_dra_python_sdk.dr_automation_service_v1 import *
-
 
 _service = DrAutomationServiceV1(authenticator=NoAuthAuthenticator())
 
@@ -597,7 +596,7 @@ class TestGetDrSummary:
         """
         # Set up mock
         url = preprocess_url('/drautomation/v1/dr_summary/123456d3-1122-3344-b67d-4389b44b7bf9')
-        mock_response = '{"managed_vm_list": {"anyKey": "anyValue"}, "orchestrator_details": {"last_updated_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "last_updated_standby_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "latest_orchestrator_time": "2025-10-16T09:28:13.696Z", "location_id": "location_id", "mfa_enabled": "mfa_enabled", "orch_ext_connectivity_status": "orch_ext_connectivity_status", "orch_standby_node_addition_status": "orch_standby_node_addition_status", "orchestrator_cluster_message": "orchestrator_cluster_message", "orchestrator_config_status": "orchestrator_config_status", "orchestrator_group_leader": "orchestrator_group_leader", "orchestrator_location_type": "orchestrator_location_type", "orchestrator_name": "orchestrator_name", "orchestrator_status": "orchestrator_status", "orchestrator_workspace_name": "orchestrator_workspace_name", "proxy_ip": "proxy_ip", "schematic_workspace_name": "schematic_workspace_name", "schematic_workspace_status": "schematic_workspace_status", "ssh_key_name": "ssh_key_name", "standby_orchestrator_name": "standby_orchestrator_name", "standby_orchestrator_status": "standby_orchestrator_status", "standby_orchestrator_workspace_name": "standby_orchestrator_workspace_name", "transit_gateway_name": "transit_gateway_name", "vpc_name": "vpc_name"}, "service_details": {"crn": "crn", "deployment_name": "deployment_name", "description": "description", "orchestrator_ha": false, "plan_name": "plan_name", "primary_ip_address": "primary_ip_address", "primary_orchestrator_dashboard_url": "primary_orchestrator_dashboard_url", "recovery_location": "recovery_location", "resource_group": "resource_group", "standby_description": "standby_description", "standby_ip_address": "standby_ip_address", "standby_orchestrator_dashboard_url": "standby_orchestrator_dashboard_url", "standby_status": "standby_status", "status": "status"}}'
+        mock_response = '{"managed_vm_list": {"anyKey": "anyValue"}, "orchestrator_details": {"last_updated_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "last_updated_standby_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "latest_orchestrator_time": "2025-10-16T09:28:13.696Z", "location_id": "location_id", "mfa_enabled": "mfa_enabled", "orch_ext_connectivity_status": "orch_ext_connectivity_status", "orch_standby_node_addition_status": "orch_standby_node_addition_status", "orchestrator_cluster_message": "orchestrator_cluster_message", "orchestrator_config_status": "orchestrator_config_status", "orchestrator_group_leader": "orchestrator_group_leader", "orchestrator_location_type": "orchestrator_location_type", "orchestrator_name": "orchestrator_name", "orchestrator_status": "orchestrator_status", "orchestrator_workspace_name": "orchestrator_workspace_name", "proxy_ip": "proxy_ip", "schematic_workspace_name": "schematic_workspace_name", "schematic_workspace_status": "schematic_workspace_status", "ssh_key_name": "ssh_key_name", "standby_orchestrator_name": "standby_orchestrator_name", "standby_orchestrator_status": "standby_orchestrator_status", "standby_orchestrator_workspace_name": "standby_orchestrator_workspace_name", "standby_ssh_key_name": "standby_ssh_key_name", "transit_gateway_name": "transit_gateway_name", "vpc_name": "vpc_name"}, "service_details": {"crn": "crn", "deployment_name": "deployment_name", "description": "description", "orchestrator_ha": false, "plan_name": "plan_name", "primary_ip_address": "primary_ip_address", "primary_orchestrator_dashboard_url": "primary_orchestrator_dashboard_url", "recovery_location": "recovery_location", "resource_group": "resource_group", "standby_description": "standby_description", "standby_ip_address": "standby_ip_address", "standby_orchestrator_dashboard_url": "standby_orchestrator_dashboard_url", "standby_status": "standby_status", "status": "status"}}'
         responses.add(
             responses.GET,
             url,
@@ -637,7 +636,7 @@ class TestGetDrSummary:
         """
         # Set up mock
         url = preprocess_url('/drautomation/v1/dr_summary/123456d3-1122-3344-b67d-4389b44b7bf9')
-        mock_response = '{"managed_vm_list": {"anyKey": "anyValue"}, "orchestrator_details": {"last_updated_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "last_updated_standby_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "latest_orchestrator_time": "2025-10-16T09:28:13.696Z", "location_id": "location_id", "mfa_enabled": "mfa_enabled", "orch_ext_connectivity_status": "orch_ext_connectivity_status", "orch_standby_node_addition_status": "orch_standby_node_addition_status", "orchestrator_cluster_message": "orchestrator_cluster_message", "orchestrator_config_status": "orchestrator_config_status", "orchestrator_group_leader": "orchestrator_group_leader", "orchestrator_location_type": "orchestrator_location_type", "orchestrator_name": "orchestrator_name", "orchestrator_status": "orchestrator_status", "orchestrator_workspace_name": "orchestrator_workspace_name", "proxy_ip": "proxy_ip", "schematic_workspace_name": "schematic_workspace_name", "schematic_workspace_status": "schematic_workspace_status", "ssh_key_name": "ssh_key_name", "standby_orchestrator_name": "standby_orchestrator_name", "standby_orchestrator_status": "standby_orchestrator_status", "standby_orchestrator_workspace_name": "standby_orchestrator_workspace_name", "transit_gateway_name": "transit_gateway_name", "vpc_name": "vpc_name"}, "service_details": {"crn": "crn", "deployment_name": "deployment_name", "description": "description", "orchestrator_ha": false, "plan_name": "plan_name", "primary_ip_address": "primary_ip_address", "primary_orchestrator_dashboard_url": "primary_orchestrator_dashboard_url", "recovery_location": "recovery_location", "resource_group": "resource_group", "standby_description": "standby_description", "standby_ip_address": "standby_ip_address", "standby_orchestrator_dashboard_url": "standby_orchestrator_dashboard_url", "standby_status": "standby_status", "status": "status"}}'
+        mock_response = '{"managed_vm_list": {"anyKey": "anyValue"}, "orchestrator_details": {"last_updated_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "last_updated_standby_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "latest_orchestrator_time": "2025-10-16T09:28:13.696Z", "location_id": "location_id", "mfa_enabled": "mfa_enabled", "orch_ext_connectivity_status": "orch_ext_connectivity_status", "orch_standby_node_addition_status": "orch_standby_node_addition_status", "orchestrator_cluster_message": "orchestrator_cluster_message", "orchestrator_config_status": "orchestrator_config_status", "orchestrator_group_leader": "orchestrator_group_leader", "orchestrator_location_type": "orchestrator_location_type", "orchestrator_name": "orchestrator_name", "orchestrator_status": "orchestrator_status", "orchestrator_workspace_name": "orchestrator_workspace_name", "proxy_ip": "proxy_ip", "schematic_workspace_name": "schematic_workspace_name", "schematic_workspace_status": "schematic_workspace_status", "ssh_key_name": "ssh_key_name", "standby_orchestrator_name": "standby_orchestrator_name", "standby_orchestrator_status": "standby_orchestrator_status", "standby_orchestrator_workspace_name": "standby_orchestrator_workspace_name", "standby_ssh_key_name": "standby_ssh_key_name", "transit_gateway_name": "transit_gateway_name", "vpc_name": "vpc_name"}, "service_details": {"crn": "crn", "deployment_name": "deployment_name", "description": "description", "orchestrator_ha": false, "plan_name": "plan_name", "primary_ip_address": "primary_ip_address", "primary_orchestrator_dashboard_url": "primary_orchestrator_dashboard_url", "recovery_location": "recovery_location", "resource_group": "resource_group", "standby_description": "standby_description", "standby_ip_address": "standby_ip_address", "standby_orchestrator_dashboard_url": "standby_orchestrator_dashboard_url", "standby_status": "standby_status", "status": "status"}}'
         responses.add(
             responses.GET,
             url,
@@ -675,7 +674,7 @@ class TestGetDrSummary:
         """
         # Set up mock
         url = preprocess_url('/drautomation/v1/dr_summary/123456d3-1122-3344-b67d-4389b44b7bf9')
-        mock_response = '{"managed_vm_list": {"anyKey": "anyValue"}, "orchestrator_details": {"last_updated_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "last_updated_standby_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "latest_orchestrator_time": "2025-10-16T09:28:13.696Z", "location_id": "location_id", "mfa_enabled": "mfa_enabled", "orch_ext_connectivity_status": "orch_ext_connectivity_status", "orch_standby_node_addition_status": "orch_standby_node_addition_status", "orchestrator_cluster_message": "orchestrator_cluster_message", "orchestrator_config_status": "orchestrator_config_status", "orchestrator_group_leader": "orchestrator_group_leader", "orchestrator_location_type": "orchestrator_location_type", "orchestrator_name": "orchestrator_name", "orchestrator_status": "orchestrator_status", "orchestrator_workspace_name": "orchestrator_workspace_name", "proxy_ip": "proxy_ip", "schematic_workspace_name": "schematic_workspace_name", "schematic_workspace_status": "schematic_workspace_status", "ssh_key_name": "ssh_key_name", "standby_orchestrator_name": "standby_orchestrator_name", "standby_orchestrator_status": "standby_orchestrator_status", "standby_orchestrator_workspace_name": "standby_orchestrator_workspace_name", "transit_gateway_name": "transit_gateway_name", "vpc_name": "vpc_name"}, "service_details": {"crn": "crn", "deployment_name": "deployment_name", "description": "description", "orchestrator_ha": false, "plan_name": "plan_name", "primary_ip_address": "primary_ip_address", "primary_orchestrator_dashboard_url": "primary_orchestrator_dashboard_url", "recovery_location": "recovery_location", "resource_group": "resource_group", "standby_description": "standby_description", "standby_ip_address": "standby_ip_address", "standby_orchestrator_dashboard_url": "standby_orchestrator_dashboard_url", "standby_status": "standby_status", "status": "status"}}'
+        mock_response = '{"managed_vm_list": {"anyKey": "anyValue"}, "orchestrator_details": {"last_updated_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "last_updated_standby_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "latest_orchestrator_time": "2025-10-16T09:28:13.696Z", "location_id": "location_id", "mfa_enabled": "mfa_enabled", "orch_ext_connectivity_status": "orch_ext_connectivity_status", "orch_standby_node_addition_status": "orch_standby_node_addition_status", "orchestrator_cluster_message": "orchestrator_cluster_message", "orchestrator_config_status": "orchestrator_config_status", "orchestrator_group_leader": "orchestrator_group_leader", "orchestrator_location_type": "orchestrator_location_type", "orchestrator_name": "orchestrator_name", "orchestrator_status": "orchestrator_status", "orchestrator_workspace_name": "orchestrator_workspace_name", "proxy_ip": "proxy_ip", "schematic_workspace_name": "schematic_workspace_name", "schematic_workspace_status": "schematic_workspace_status", "ssh_key_name": "ssh_key_name", "standby_orchestrator_name": "standby_orchestrator_name", "standby_orchestrator_status": "standby_orchestrator_status", "standby_orchestrator_workspace_name": "standby_orchestrator_workspace_name", "standby_ssh_key_name": "standby_ssh_key_name", "transit_gateway_name": "transit_gateway_name", "vpc_name": "vpc_name"}, "service_details": {"crn": "crn", "deployment_name": "deployment_name", "description": "description", "orchestrator_ha": false, "plan_name": "plan_name", "primary_ip_address": "primary_ip_address", "primary_orchestrator_dashboard_url": "primary_orchestrator_dashboard_url", "recovery_location": "recovery_location", "resource_group": "resource_group", "standby_description": "standby_description", "standby_ip_address": "standby_ip_address", "standby_orchestrator_dashboard_url": "standby_orchestrator_dashboard_url", "standby_status": "standby_status", "status": "status"}}'
         responses.add(
             responses.GET,
             url,
@@ -1023,7 +1022,7 @@ class TestCreateManageDr:
         """
         # Set up mock
         url = preprocess_url('/drautomation/v1/manage_dr/123456d3-1122-3344-b67d-4389b44b7bf9')
-        mock_response = '{"dashboard_url": "https://power-dra.cloud.ibm.com/power-dra-ui?instance_id=crn:v1:bluemix:public:power-dr-automation:us-south:a/fe3c2ccd058e407c81e1dba2b5c0e0d6:e3d09875-bbf8-4d8a-b52c-abefb67a53c5::", "id": "crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::"}'
+        mock_response = '{"dashboard_url": "https://power-dra.cloud.ibm.com/power-dra-ui?instance_id=crn:v1:bluemix:public:power-dr-automation:us-south:a/fe3c2ccd058e407c81e1dba2b5c0e0d6:e3d09875-bbf8-4d8a-b52c-abefb67a53c5::", "id": "crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::", "orchestrator_location_type": "off-premises", "location_id": "dal10", "ssh_key_name": "sshkey-name", "standby_ssh_key_name": "sshkey-name", "orchestrator_name": "adminUser", "orchestrator_workspace_id": "orch-workspace-01", "standby_orchestrator_name": "standbyAdmin", "standby_orchestrator_workspace_id": "orch-standby-02", "orchestrator_ha": true, "resource_instance": "crn:v1:bluemix:public:resource-controller:us-south:a/123456fb04ceebfb4a9fd38c22334455:resource-instance::", "secret_group": "default-secret-group", "secret": "secret", "region_id": "us-south", "guid": "123e4567-e89b-12d3-a456-426614174000", "machine_type": "bx2-4x16", "tier": "Standard", "standby_tier": "Premium", "standby_machine_type": "bx2-8x32", "tenant_name": "xxx.ibm.com", "proxy_ip": "10.40.30.10:8888"}'
         responses.add(
             responses.POST,
             url,
@@ -1041,19 +1040,31 @@ class TestCreateManageDr:
         orchestrator_password = 'testString'
         orchestrator_workspace_id = 'orch-workspace-01'
         api_key = 'testString'
+        managed_apikey = 'testString'
         client_id = 'abcd-97d2-1234-bf62-8eaecc67a1234'
         client_secret = 'abcd1234xM1y123wK6qR9123456789bE2jG0pabcdefgh'
         guid = '123e4567-e89b-12d3-a456-426614174000'
         orchestrator_ha = True
+        orchestrator_network_ids = ['d9c7f1ab-47b2-4e6f-b0a8-9d2e5d7f5678', '8ab29d71-8321-44d4-9cae-119fdc30a8ab']
+        orchestrator_workspace_location = 'us-south'
         proxy_ip = '10.40.30.10:8888'
         region_id = 'us-south'
-        resource_instance = 'crn:v1:bluemix:public:resource-controller::res123'
+        resource_instance = (
+            'crn:v1:bluemix:public:resource-controller:us-south:a/123456fb04ceebfb4a9fd38c22334455:resource-instance::'
+        )
+        secondary_workspace_id = 'secondary-workspace789'
         secret = 'testString'
         secret_group = 'default-secret-group'
-        ssh_key_name = 'my-ssh-key'
+        ssh_key_name = 'sshkey-name'
         standby_machine_type = 'bx2-8x32'
         standby_orchestrator_name = 'standbyAdmin'
+        standby_orchestrator_network_ids = [
+            'd9c7f1ab-47b2-4e6f-b0a8-9d2e5d7f5678',
+            '8ab29d71-8321-44d4-9cae-119fdc30a8ab',
+        ]
+        standby_ssh_key_name = 'standby-sshkey-name'
         standby_orchestrator_workspace_id = 'orch-standby-02'
+        standby_orchestrator_workspace_location = 'us-east'
         standby_tier = 'Premium'
         tenant_name = 'xxx.ibm.com'
         tier = 'Standard'
@@ -1071,19 +1082,26 @@ class TestCreateManageDr:
             orchestrator_password,
             orchestrator_workspace_id,
             api_key=api_key,
+            managed_apikey=managed_apikey,
             client_id=client_id,
             client_secret=client_secret,
             guid=guid,
             orchestrator_ha=orchestrator_ha,
+            orchestrator_network_ids=orchestrator_network_ids,
+            orchestrator_workspace_location=orchestrator_workspace_location,
             proxy_ip=proxy_ip,
             region_id=region_id,
             resource_instance=resource_instance,
+            secondary_workspace_id=secondary_workspace_id,
             secret=secret,
             secret_group=secret_group,
             ssh_key_name=ssh_key_name,
             standby_machine_type=standby_machine_type,
             standby_orchestrator_name=standby_orchestrator_name,
+            standby_orchestrator_network_ids=standby_orchestrator_network_ids,
+            standby_ssh_key_name=standby_ssh_key_name,
             standby_orchestrator_workspace_id=standby_orchestrator_workspace_id,
+            standby_orchestrator_workspace_location=standby_orchestrator_workspace_location,
             standby_tier=standby_tier,
             tenant_name=tenant_name,
             tier=tier,
@@ -1110,19 +1128,35 @@ class TestCreateManageDr:
         assert req_body['orchestrator_password'] == 'testString'
         assert req_body['orchestrator_workspace_id'] == 'orch-workspace-01'
         assert req_body['api_key'] == 'testString'
+        assert req_body['managed_apikey'] == 'testString'
         assert req_body['client_id'] == 'abcd-97d2-1234-bf62-8eaecc67a1234'
         assert req_body['client_secret'] == 'abcd1234xM1y123wK6qR9123456789bE2jG0pabcdefgh'
         assert req_body['guid'] == '123e4567-e89b-12d3-a456-426614174000'
         assert req_body['orchestrator_ha'] == True
+        assert req_body['orchestrator_network_ids'] == [
+            'd9c7f1ab-47b2-4e6f-b0a8-9d2e5d7f5678',
+            '8ab29d71-8321-44d4-9cae-119fdc30a8ab',
+        ]
+        assert req_body['orchestrator_workspace_location'] == 'us-south'
         assert req_body['proxy_ip'] == '10.40.30.10:8888'
         assert req_body['region_id'] == 'us-south'
-        assert req_body['resource_instance'] == 'crn:v1:bluemix:public:resource-controller::res123'
+        assert (
+            req_body['resource_instance']
+            == 'crn:v1:bluemix:public:resource-controller:us-south:a/123456fb04ceebfb4a9fd38c22334455:resource-instance::'
+        )
+        assert req_body['secondary_workspace_id'] == 'secondary-workspace789'
         assert req_body['secret'] == 'testString'
         assert req_body['secret_group'] == 'default-secret-group'
-        assert req_body['ssh_key_name'] == 'my-ssh-key'
+        assert req_body['ssh_key_name'] == 'sshkey-name'
         assert req_body['standby_machine_type'] == 'bx2-8x32'
         assert req_body['standby_orchestrator_name'] == 'standbyAdmin'
+        assert req_body['standby_orchestrator_network_ids'] == [
+            'd9c7f1ab-47b2-4e6f-b0a8-9d2e5d7f5678',
+            '8ab29d71-8321-44d4-9cae-119fdc30a8ab',
+        ]
+        assert req_body['standby_ssh_key_name'] == 'standby-sshkey-name'
         assert req_body['standby_orchestrator_workspace_id'] == 'orch-standby-02'
+        assert req_body['standby_orchestrator_workspace_location'] == 'us-east'
         assert req_body['standby_tier'] == 'Premium'
         assert req_body['tenant_name'] == 'xxx.ibm.com'
         assert req_body['tier'] == 'Standard'
@@ -1143,7 +1177,7 @@ class TestCreateManageDr:
         """
         # Set up mock
         url = preprocess_url('/drautomation/v1/manage_dr/123456d3-1122-3344-b67d-4389b44b7bf9')
-        mock_response = '{"dashboard_url": "https://power-dra.cloud.ibm.com/power-dra-ui?instance_id=crn:v1:bluemix:public:power-dr-automation:us-south:a/fe3c2ccd058e407c81e1dba2b5c0e0d6:e3d09875-bbf8-4d8a-b52c-abefb67a53c5::", "id": "crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::"}'
+        mock_response = '{"dashboard_url": "https://power-dra.cloud.ibm.com/power-dra-ui?instance_id=crn:v1:bluemix:public:power-dr-automation:us-south:a/fe3c2ccd058e407c81e1dba2b5c0e0d6:e3d09875-bbf8-4d8a-b52c-abefb67a53c5::", "id": "crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::", "orchestrator_location_type": "off-premises", "location_id": "dal10", "ssh_key_name": "sshkey-name", "standby_ssh_key_name": "sshkey-name", "orchestrator_name": "adminUser", "orchestrator_workspace_id": "orch-workspace-01", "standby_orchestrator_name": "standbyAdmin", "standby_orchestrator_workspace_id": "orch-standby-02", "orchestrator_ha": true, "resource_instance": "crn:v1:bluemix:public:resource-controller:us-south:a/123456fb04ceebfb4a9fd38c22334455:resource-instance::", "secret_group": "default-secret-group", "secret": "secret", "region_id": "us-south", "guid": "123e4567-e89b-12d3-a456-426614174000", "machine_type": "bx2-4x16", "tier": "Standard", "standby_tier": "Premium", "standby_machine_type": "bx2-8x32", "tenant_name": "xxx.ibm.com", "proxy_ip": "10.40.30.10:8888"}'
         responses.add(
             responses.POST,
             url,
@@ -1161,19 +1195,31 @@ class TestCreateManageDr:
         orchestrator_password = 'testString'
         orchestrator_workspace_id = 'orch-workspace-01'
         api_key = 'testString'
+        managed_apikey = 'testString'
         client_id = 'abcd-97d2-1234-bf62-8eaecc67a1234'
         client_secret = 'abcd1234xM1y123wK6qR9123456789bE2jG0pabcdefgh'
         guid = '123e4567-e89b-12d3-a456-426614174000'
         orchestrator_ha = True
+        orchestrator_network_ids = ['d9c7f1ab-47b2-4e6f-b0a8-9d2e5d7f5678', '8ab29d71-8321-44d4-9cae-119fdc30a8ab']
+        orchestrator_workspace_location = 'us-south'
         proxy_ip = '10.40.30.10:8888'
         region_id = 'us-south'
-        resource_instance = 'crn:v1:bluemix:public:resource-controller::res123'
+        resource_instance = (
+            'crn:v1:bluemix:public:resource-controller:us-south:a/123456fb04ceebfb4a9fd38c22334455:resource-instance::'
+        )
+        secondary_workspace_id = 'secondary-workspace789'
         secret = 'testString'
         secret_group = 'default-secret-group'
-        ssh_key_name = 'my-ssh-key'
+        ssh_key_name = 'sshkey-name'
         standby_machine_type = 'bx2-8x32'
         standby_orchestrator_name = 'standbyAdmin'
+        standby_orchestrator_network_ids = [
+            'd9c7f1ab-47b2-4e6f-b0a8-9d2e5d7f5678',
+            '8ab29d71-8321-44d4-9cae-119fdc30a8ab',
+        ]
+        standby_ssh_key_name = 'standby-sshkey-name'
         standby_orchestrator_workspace_id = 'orch-standby-02'
+        standby_orchestrator_workspace_location = 'us-east'
         standby_tier = 'Premium'
         tenant_name = 'xxx.ibm.com'
         tier = 'Standard'
@@ -1188,19 +1234,26 @@ class TestCreateManageDr:
             orchestrator_password,
             orchestrator_workspace_id,
             api_key=api_key,
+            managed_apikey=managed_apikey,
             client_id=client_id,
             client_secret=client_secret,
             guid=guid,
             orchestrator_ha=orchestrator_ha,
+            orchestrator_network_ids=orchestrator_network_ids,
+            orchestrator_workspace_location=orchestrator_workspace_location,
             proxy_ip=proxy_ip,
             region_id=region_id,
             resource_instance=resource_instance,
+            secondary_workspace_id=secondary_workspace_id,
             secret=secret,
             secret_group=secret_group,
             ssh_key_name=ssh_key_name,
             standby_machine_type=standby_machine_type,
             standby_orchestrator_name=standby_orchestrator_name,
+            standby_orchestrator_network_ids=standby_orchestrator_network_ids,
+            standby_ssh_key_name=standby_ssh_key_name,
             standby_orchestrator_workspace_id=standby_orchestrator_workspace_id,
+            standby_orchestrator_workspace_location=standby_orchestrator_workspace_location,
             standby_tier=standby_tier,
             tenant_name=tenant_name,
             tier=tier,
@@ -1219,19 +1272,35 @@ class TestCreateManageDr:
         assert req_body['orchestrator_password'] == 'testString'
         assert req_body['orchestrator_workspace_id'] == 'orch-workspace-01'
         assert req_body['api_key'] == 'testString'
+        assert req_body['managed_apikey'] == 'testString'
         assert req_body['client_id'] == 'abcd-97d2-1234-bf62-8eaecc67a1234'
         assert req_body['client_secret'] == 'abcd1234xM1y123wK6qR9123456789bE2jG0pabcdefgh'
         assert req_body['guid'] == '123e4567-e89b-12d3-a456-426614174000'
         assert req_body['orchestrator_ha'] == True
+        assert req_body['orchestrator_network_ids'] == [
+            'd9c7f1ab-47b2-4e6f-b0a8-9d2e5d7f5678',
+            '8ab29d71-8321-44d4-9cae-119fdc30a8ab',
+        ]
+        assert req_body['orchestrator_workspace_location'] == 'us-south'
         assert req_body['proxy_ip'] == '10.40.30.10:8888'
         assert req_body['region_id'] == 'us-south'
-        assert req_body['resource_instance'] == 'crn:v1:bluemix:public:resource-controller::res123'
+        assert (
+            req_body['resource_instance']
+            == 'crn:v1:bluemix:public:resource-controller:us-south:a/123456fb04ceebfb4a9fd38c22334455:resource-instance::'
+        )
+        assert req_body['secondary_workspace_id'] == 'secondary-workspace789'
         assert req_body['secret'] == 'testString'
         assert req_body['secret_group'] == 'default-secret-group'
-        assert req_body['ssh_key_name'] == 'my-ssh-key'
+        assert req_body['ssh_key_name'] == 'sshkey-name'
         assert req_body['standby_machine_type'] == 'bx2-8x32'
         assert req_body['standby_orchestrator_name'] == 'standbyAdmin'
+        assert req_body['standby_orchestrator_network_ids'] == [
+            'd9c7f1ab-47b2-4e6f-b0a8-9d2e5d7f5678',
+            '8ab29d71-8321-44d4-9cae-119fdc30a8ab',
+        ]
+        assert req_body['standby_ssh_key_name'] == 'standby-sshkey-name'
         assert req_body['standby_orchestrator_workspace_id'] == 'orch-standby-02'
+        assert req_body['standby_orchestrator_workspace_location'] == 'us-east'
         assert req_body['standby_tier'] == 'Premium'
         assert req_body['tenant_name'] == 'xxx.ibm.com'
         assert req_body['tier'] == 'Standard'
@@ -1252,7 +1321,7 @@ class TestCreateManageDr:
         """
         # Set up mock
         url = preprocess_url('/drautomation/v1/manage_dr/123456d3-1122-3344-b67d-4389b44b7bf9')
-        mock_response = '{"dashboard_url": "https://power-dra.cloud.ibm.com/power-dra-ui?instance_id=crn:v1:bluemix:public:power-dr-automation:us-south:a/fe3c2ccd058e407c81e1dba2b5c0e0d6:e3d09875-bbf8-4d8a-b52c-abefb67a53c5::", "id": "crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::"}'
+        mock_response = '{"dashboard_url": "https://power-dra.cloud.ibm.com/power-dra-ui?instance_id=crn:v1:bluemix:public:power-dr-automation:us-south:a/fe3c2ccd058e407c81e1dba2b5c0e0d6:e3d09875-bbf8-4d8a-b52c-abefb67a53c5::", "id": "crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::", "orchestrator_location_type": "off-premises", "location_id": "dal10", "ssh_key_name": "sshkey-name", "standby_ssh_key_name": "sshkey-name", "orchestrator_name": "adminUser", "orchestrator_workspace_id": "orch-workspace-01", "standby_orchestrator_name": "standbyAdmin", "standby_orchestrator_workspace_id": "orch-standby-02", "orchestrator_ha": true, "resource_instance": "crn:v1:bluemix:public:resource-controller:us-south:a/123456fb04ceebfb4a9fd38c22334455:resource-instance::", "secret_group": "default-secret-group", "secret": "secret", "region_id": "us-south", "guid": "123e4567-e89b-12d3-a456-426614174000", "machine_type": "bx2-4x16", "tier": "Standard", "standby_tier": "Premium", "standby_machine_type": "bx2-8x32", "tenant_name": "xxx.ibm.com", "proxy_ip": "10.40.30.10:8888"}'
         responses.add(
             responses.POST,
             url,
@@ -1270,19 +1339,31 @@ class TestCreateManageDr:
         orchestrator_password = 'testString'
         orchestrator_workspace_id = 'orch-workspace-01'
         api_key = 'testString'
+        managed_apikey = 'testString'
         client_id = 'abcd-97d2-1234-bf62-8eaecc67a1234'
         client_secret = 'abcd1234xM1y123wK6qR9123456789bE2jG0pabcdefgh'
         guid = '123e4567-e89b-12d3-a456-426614174000'
         orchestrator_ha = True
+        orchestrator_network_ids = ['d9c7f1ab-47b2-4e6f-b0a8-9d2e5d7f5678', '8ab29d71-8321-44d4-9cae-119fdc30a8ab']
+        orchestrator_workspace_location = 'us-south'
         proxy_ip = '10.40.30.10:8888'
         region_id = 'us-south'
-        resource_instance = 'crn:v1:bluemix:public:resource-controller::res123'
+        resource_instance = (
+            'crn:v1:bluemix:public:resource-controller:us-south:a/123456fb04ceebfb4a9fd38c22334455:resource-instance::'
+        )
+        secondary_workspace_id = 'secondary-workspace789'
         secret = 'testString'
         secret_group = 'default-secret-group'
-        ssh_key_name = 'my-ssh-key'
+        ssh_key_name = 'sshkey-name'
         standby_machine_type = 'bx2-8x32'
         standby_orchestrator_name = 'standbyAdmin'
+        standby_orchestrator_network_ids = [
+            'd9c7f1ab-47b2-4e6f-b0a8-9d2e5d7f5678',
+            '8ab29d71-8321-44d4-9cae-119fdc30a8ab',
+        ]
+        standby_ssh_key_name = 'standby-sshkey-name'
         standby_orchestrator_workspace_id = 'orch-standby-02'
+        standby_orchestrator_workspace_location = 'us-east'
         standby_tier = 'Premium'
         tenant_name = 'xxx.ibm.com'
         tier = 'Standard'
@@ -1363,7 +1444,7 @@ class TestGetLastOperation:
         """
         # Set up mock
         url = preprocess_url('/drautomation/v1/last_operation/123456d3-1122-3344-b67d-4389b44b7bf9')
-        mock_response = '{"crn": "crn:v1:staging:public:power-dr-automation:global:a/2c5d7270091f495795350e9adfa8399c:86e0c9a9-80f4-4fcf-88a0-07643de01bb8::", "deployment_name": "dr-deployment-instance-1", "last_updated_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "last_updated_standby_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "mfa_enabled": "true", "orch_ext_connectivity_status": "Connected", "orch_standby_node_addtion_status": "Completed", "orchestrator_cluster_message": "Cluster healthy", "orchestrator_config_status": "Configured", "orchestrator_ha": true, "plan_name": "DR Automation Private Plan", "primary_description": "2/5: Creating primary orchestrator VM.", "primary_ip_address": "192.168.1.10", "primary_orchestrator_status": "orchestrator-VM-creation-in-progress", "recovery_location": "us-east", "resource_group": "Default", "standby_description": "1/4: Service instance is downloading orchestrator image for standby VM creation.", "standby_ip_address": "192.168.1.11", "standby_status": "downloading-orchestrator-image", "status": "Running"}'
+        mock_response = '{"crn": "crn:v1:staging:public:power-dr-automation:global:a/2c5d7270091f495795350e9adfa8399c:86e0c9a9-80f4-4fcf-88a0-07643de01bb8::", "deployment_name": "dr-deployment-instance-1", "last_updated_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "last_updated_standby_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "mfa_enabled": "true", "orch_ext_connectivity_status": "Connected", "orch_standby_node_addition_status": "Completed", "orchestrator_cluster_message": "Cluster healthy", "orchestrator_config_status": "Configured", "orchestrator_ha": true, "plan_name": "DR Automation Private Plan", "primary_description": "2/5: Creating primary orchestrator VM.", "primary_error_description": "primary_error_description", "primary_ip_address": "192.168.1.10", "primary_orchestrator_status": "orchestrator-VM-creation-in-progress", "recovery_location": "us-east", "resource_group": "Default", "standby_description": "1/4: Service instance is downloading orchestrator image for standby VM creation.", "standby_error_description": "standby_error_description", "standby_ip_address": "192.168.1.11", "standby_status": "downloading-orchestrator-image", "status": "Running", "is_api_key_expired": false}'
         responses.add(
             responses.GET,
             url,
@@ -1403,7 +1484,7 @@ class TestGetLastOperation:
         """
         # Set up mock
         url = preprocess_url('/drautomation/v1/last_operation/123456d3-1122-3344-b67d-4389b44b7bf9')
-        mock_response = '{"crn": "crn:v1:staging:public:power-dr-automation:global:a/2c5d7270091f495795350e9adfa8399c:86e0c9a9-80f4-4fcf-88a0-07643de01bb8::", "deployment_name": "dr-deployment-instance-1", "last_updated_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "last_updated_standby_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "mfa_enabled": "true", "orch_ext_connectivity_status": "Connected", "orch_standby_node_addtion_status": "Completed", "orchestrator_cluster_message": "Cluster healthy", "orchestrator_config_status": "Configured", "orchestrator_ha": true, "plan_name": "DR Automation Private Plan", "primary_description": "2/5: Creating primary orchestrator VM.", "primary_ip_address": "192.168.1.10", "primary_orchestrator_status": "orchestrator-VM-creation-in-progress", "recovery_location": "us-east", "resource_group": "Default", "standby_description": "1/4: Service instance is downloading orchestrator image for standby VM creation.", "standby_ip_address": "192.168.1.11", "standby_status": "downloading-orchestrator-image", "status": "Running"}'
+        mock_response = '{"crn": "crn:v1:staging:public:power-dr-automation:global:a/2c5d7270091f495795350e9adfa8399c:86e0c9a9-80f4-4fcf-88a0-07643de01bb8::", "deployment_name": "dr-deployment-instance-1", "last_updated_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "last_updated_standby_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "mfa_enabled": "true", "orch_ext_connectivity_status": "Connected", "orch_standby_node_addition_status": "Completed", "orchestrator_cluster_message": "Cluster healthy", "orchestrator_config_status": "Configured", "orchestrator_ha": true, "plan_name": "DR Automation Private Plan", "primary_description": "2/5: Creating primary orchestrator VM.", "primary_error_description": "primary_error_description", "primary_ip_address": "192.168.1.10", "primary_orchestrator_status": "orchestrator-VM-creation-in-progress", "recovery_location": "us-east", "resource_group": "Default", "standby_description": "1/4: Service instance is downloading orchestrator image for standby VM creation.", "standby_error_description": "standby_error_description", "standby_ip_address": "192.168.1.11", "standby_status": "downloading-orchestrator-image", "status": "Running", "is_api_key_expired": false}'
         responses.add(
             responses.GET,
             url,
@@ -1441,7 +1522,7 @@ class TestGetLastOperation:
         """
         # Set up mock
         url = preprocess_url('/drautomation/v1/last_operation/123456d3-1122-3344-b67d-4389b44b7bf9')
-        mock_response = '{"crn": "crn:v1:staging:public:power-dr-automation:global:a/2c5d7270091f495795350e9adfa8399c:86e0c9a9-80f4-4fcf-88a0-07643de01bb8::", "deployment_name": "dr-deployment-instance-1", "last_updated_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "last_updated_standby_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "mfa_enabled": "true", "orch_ext_connectivity_status": "Connected", "orch_standby_node_addtion_status": "Completed", "orchestrator_cluster_message": "Cluster healthy", "orchestrator_config_status": "Configured", "orchestrator_ha": true, "plan_name": "DR Automation Private Plan", "primary_description": "2/5: Creating primary orchestrator VM.", "primary_ip_address": "192.168.1.10", "primary_orchestrator_status": "orchestrator-VM-creation-in-progress", "recovery_location": "us-east", "resource_group": "Default", "standby_description": "1/4: Service instance is downloading orchestrator image for standby VM creation.", "standby_ip_address": "192.168.1.11", "standby_status": "downloading-orchestrator-image", "status": "Running"}'
+        mock_response = '{"crn": "crn:v1:staging:public:power-dr-automation:global:a/2c5d7270091f495795350e9adfa8399c:86e0c9a9-80f4-4fcf-88a0-07643de01bb8::", "deployment_name": "dr-deployment-instance-1", "last_updated_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "last_updated_standby_orchestrator_deployment_time": "2025-10-16T09:28:13.696Z", "mfa_enabled": "true", "orch_ext_connectivity_status": "Connected", "orch_standby_node_addition_status": "Completed", "orchestrator_cluster_message": "Cluster healthy", "orchestrator_config_status": "Configured", "orchestrator_ha": true, "plan_name": "DR Automation Private Plan", "primary_description": "2/5: Creating primary orchestrator VM.", "primary_error_description": "primary_error_description", "primary_ip_address": "192.168.1.10", "primary_orchestrator_status": "orchestrator-VM-creation-in-progress", "recovery_location": "us-east", "resource_group": "Default", "standby_description": "1/4: Service instance is downloading orchestrator image for standby VM creation.", "standby_error_description": "standby_error_description", "standby_ip_address": "192.168.1.11", "standby_status": "downloading-orchestrator-image", "status": "Running", "is_api_key_expired": false}'
         responses.add(
             responses.GET,
             url,
@@ -1534,7 +1615,6 @@ class TestListEvents:
 
         # Set up parameter values
         instance_id = '123456d3-1122-3344-b67d-4389b44b7bf9'
-        time = '2025-06-19T23:59:59Z'
         from_time = '2025-06-19T00:00:00Z'
         to_time = '2025-06-19T23:59:59Z'
         accept_language = 'testString'
@@ -1542,7 +1622,6 @@ class TestListEvents:
         # Invoke method
         response = _service.list_events(
             instance_id,
-            time=time,
             from_time=from_time,
             to_time=to_time,
             accept_language=accept_language,
@@ -1555,7 +1634,6 @@ class TestListEvents:
         # Validate query params
         query_string = responses.calls[0].request.url.split('?', 1)[1]
         query_string = urllib.parse.unquote_plus(query_string)
-        assert 'time={}'.format(time) in query_string
         assert 'from_time={}'.format(from_time) in query_string
         assert 'to_time={}'.format(to_time) in query_string
 
@@ -1948,6 +2026,7 @@ class TestModel_DrAutomationGetSummaryResponse:
         orchestrator_details_model['standby_orchestrator_name'] = 'testString'
         orchestrator_details_model['standby_orchestrator_status'] = 'testString'
         orchestrator_details_model['standby_orchestrator_workspace_name'] = 'testString'
+        orchestrator_details_model['standby_ssh_key_name'] = 'testString'
         orchestrator_details_model['transit_gateway_name'] = 'testString'
         orchestrator_details_model['vpc_name'] = 'testString'
 
@@ -2465,6 +2544,7 @@ class TestModel_OrchestratorDetails:
         orchestrator_details_model_json['standby_orchestrator_name'] = 'testString'
         orchestrator_details_model_json['standby_orchestrator_status'] = 'testString'
         orchestrator_details_model_json['standby_orchestrator_workspace_name'] = 'testString'
+        orchestrator_details_model_json['standby_ssh_key_name'] = 'testString'
         orchestrator_details_model_json['transit_gateway_name'] = 'testString'
         orchestrator_details_model_json['vpc_name'] = 'testString'
 
@@ -2545,6 +2625,28 @@ class TestModel_ServiceInstanceManageDR:
         service_instance_manage_dr_model_json['id'] = (
             'crn:v1:staging:public:power-dr-automation:global:a/a123456fb04ceebfb4a9fd38c22334455:123456d3-1122-3344-b67d-4389b44b7bf9::'
         )
+        service_instance_manage_dr_model_json['orchestrator_location_type'] = 'off-premises'
+        service_instance_manage_dr_model_json['location_id'] = 'dal10'
+        service_instance_manage_dr_model_json['ssh_key_name'] = 'sshkey-name'
+        service_instance_manage_dr_model_json['standby_ssh_key_name'] = 'sshkey-name'
+        service_instance_manage_dr_model_json['orchestrator_name'] = 'adminUser'
+        service_instance_manage_dr_model_json['orchestrator_workspace_id'] = 'orch-workspace-01'
+        service_instance_manage_dr_model_json['standby_orchestrator_name'] = 'standbyAdmin'
+        service_instance_manage_dr_model_json['standby_orchestrator_workspace_id'] = 'orch-standby-02'
+        service_instance_manage_dr_model_json['orchestrator_ha'] = True
+        service_instance_manage_dr_model_json['resource_instance'] = (
+            'crn:v1:bluemix:public:resource-controller:us-south:a/123456fb04ceebfb4a9fd38c22334455:resource-instance::'
+        )
+        service_instance_manage_dr_model_json['secret_group'] = 'default-secret-group'
+        service_instance_manage_dr_model_json['secret'] = 'testString'
+        service_instance_manage_dr_model_json['region_id'] = 'us-south'
+        service_instance_manage_dr_model_json['guid'] = '123e4567-e89b-12d3-a456-426614174000'
+        service_instance_manage_dr_model_json['machine_type'] = 'bx2-4x16'
+        service_instance_manage_dr_model_json['tier'] = 'Standard'
+        service_instance_manage_dr_model_json['standby_tier'] = 'Premium'
+        service_instance_manage_dr_model_json['standby_machine_type'] = 'bx2-8x32'
+        service_instance_manage_dr_model_json['tenant_name'] = 'xxx.ibm.com'
+        service_instance_manage_dr_model_json['proxy_ip'] = '10.40.30.10:8888'
 
         # Construct a model instance of ServiceInstanceManageDR by calling from_dict on the json representation
         service_instance_manage_dr_model = ServiceInstanceManageDR.from_dict(service_instance_manage_dr_model_json)
@@ -2586,12 +2688,13 @@ class TestModel_ServiceInstanceStatus:
         )
         service_instance_status_model_json['mfa_enabled'] = 'true'
         service_instance_status_model_json['orch_ext_connectivity_status'] = 'Connected'
-        service_instance_status_model_json['orch_standby_node_addtion_status'] = 'Completed'
+        service_instance_status_model_json['orch_standby_node_addition_status'] = 'Completed'
         service_instance_status_model_json['orchestrator_cluster_message'] = 'Cluster healthy'
         service_instance_status_model_json['orchestrator_config_status'] = 'Configured'
         service_instance_status_model_json['orchestrator_ha'] = True
         service_instance_status_model_json['plan_name'] = 'DR Automation Private Plan'
         service_instance_status_model_json['primary_description'] = '2/5: Creating primary orchestrator VM.'
+        service_instance_status_model_json['primary_error_description'] = 'testString'
         service_instance_status_model_json['primary_ip_address'] = '192.168.1.10'
         service_instance_status_model_json['primary_orchestrator_status'] = 'orchestrator-VM-creation-in-progress'
         service_instance_status_model_json['recovery_location'] = 'us-east'
@@ -2599,9 +2702,11 @@ class TestModel_ServiceInstanceStatus:
         service_instance_status_model_json['standby_description'] = (
             '1/4: Service instance is downloading orchestrator image for standby VM creation.'
         )
+        service_instance_status_model_json['standby_error_description'] = 'testString'
         service_instance_status_model_json['standby_ip_address'] = '192.168.1.11'
         service_instance_status_model_json['standby_status'] = 'downloading-orchestrator-image'
         service_instance_status_model_json['status'] = 'Running'
+        service_instance_status_model_json['is_api_key_expired'] = False
 
         # Construct a model instance of ServiceInstanceStatus by calling from_dict on the json representation
         service_instance_status_model = ServiceInstanceStatus.from_dict(service_instance_status_model_json)

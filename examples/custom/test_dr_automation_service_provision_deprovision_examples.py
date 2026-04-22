@@ -6,7 +6,7 @@ from ibm_cloud_sdk_core import ApiException
 from ibm_platform_services import GlobalCatalogV1, ResourceControllerV2
 
 #
-# Example for provisioning and deleting a service instance
+# Example for Drautomation provisioning and deprovisioning a service instance
 #
 
 
@@ -40,8 +40,10 @@ class TestResourceControllerV2Examples:
         try:
             # Configurable values
             service_name = "power-dr-automation"
-            plan_name = "power-virtual-server-dr-automation"
-            resource_group_id = "9d445dfd58484a489220751d0077f906"  # Replace with your RG ID
+            plan_name = (
+                "power-virtual-server-dr-automation"  # Mention your plan name for your service to create the provision.
+            )
+            resource_group_id = "8d445dfd58484a4892207123456"  # Replace with your RG ID
             resource_instance_name = "pythonsdktestmp123"
             target_region = "global"
 
@@ -55,9 +57,9 @@ class TestResourceControllerV2Examples:
 
             service_entry_id = search_result["resources"][0]["id"]
 
-            # Step 2: Find plan by name
+            # Step 2: Use global catalog to fetch the plan ID from the given plan name
             child_result = catalog_service.get_child_objects(id=service_entry_id, kind="*", complete=True).get_result()
-
+            # Found the plan id from the user given plan name.
             plan_id = None
             for child in child_result["resources"]:
                 if child.get("name") == plan_name:
@@ -95,6 +97,7 @@ class TestResourceControllerV2Examples:
         except ApiException as e:
             pytest.fail(f"API exception: {str(e)}")
 
+    # Example: Deprovision (delete) a previously provisioned resource instance. This prints the instance details that will be used in the delete request.
     def test_delete_resource_instance(self):
         """
         Delete a resource instance by GUID
@@ -102,8 +105,7 @@ class TestResourceControllerV2Examples:
         try:
             # Use the instance GUID from create step OR hardcode one
             instance_guid = globals().get(
-                "created_instance_guid",
-                "crn:v1:bluemix:public:power-dr-automation:global:a/094f4214c75941f991da601b001df1fe:2516418e-2aaf-45e4-8cde-8c13776879fd::",
+                "crn:v1:bluemix:public:power-dr-automation:global:a/12345671f991da601b001df1fe:2516418e-2aaf-45e4-8cde-8c13776879fd::",
             )
 
             print(f"\nDeleting resource instance: {instance_guid}")

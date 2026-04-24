@@ -17,5 +17,4 @@
 """
 Version of ibm_dra_python_sdk
 """
-
 __version__ = '0.0.1'

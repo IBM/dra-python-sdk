@@ -24,6 +24,7 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Software Development :: Libraries :: Application Frameworks",
 ]
+
 keywords=["ibm", "cloud", "ibm cloud services" ]
 dependencies = [
     "ibm_cloud_sdk_core>=3.24.2,<4.0.0",

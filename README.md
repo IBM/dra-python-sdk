@@ -1,6 +1,6 @@
 [![Build Status](https://v3.travis-ci.com/DRAutomation/dra-python-sdk.svg?token=Z799xXryYYPor3yyJxEs&branch=main)](https://v3.travis.ibm.com/DRAutomation/dra-python-sdk)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-# IBM Cloud DrAutomation Python SDK Version 0.0.1
+# IBM Cloud DrAutomation Python SDK Version 0.1.0
 
 Python client library to interact with various [IBM Cloud DrAutomation services APIs](https://cloud.ibm.com/docs/dr-automation-powervs).
 

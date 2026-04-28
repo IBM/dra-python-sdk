@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# (C) Copyright IBM Corp. 2025.
+# (C) Copyright IBM Corp. 2026.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -309,9 +309,9 @@ class TestDrAutomationServiceV1Examples:
             # begin-list_events
 
             response = dr_automation_service_service.list_events(
-                instance_id='df6b8951-5442-44e9-a2a4-399923e5678j29d',
-                from_time='2025-12-02T03:10:00Z',
-                to_time='2025-12-09T23:59:59Z',
+                instance_id='123456d3-1122-3344-b67d-4389b44b7bf9',
+                from_time='2025-06-19T00:00:00Z',
+                to_time='2025-06-19T23:59:59Z',
             )
             event_collection = response.get_result()
 
@@ -333,8 +333,8 @@ class TestDrAutomationServiceV1Examples:
             # begin-get_event
 
             response = dr_automation_service_service.get_event(
-                instance_id='df6b8951-5442-44e9-a2a4-399923e5678j29d',
-                event_id='df6b8951-5442-44e9-a2a4-399923e5678j29d-1764680961045247391',
+                instance_id='123456d3-1122-3344-b67d-4389b44b7bf9',
+                event_id='00116b2a-9326-4024-839e-fb5364b76898',
             )
             event = response.get_result()
 

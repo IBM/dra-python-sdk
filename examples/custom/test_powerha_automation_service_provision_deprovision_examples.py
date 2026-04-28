@@ -6,7 +6,7 @@ from ibm_cloud_sdk_core import ApiException
 from ibm_platform_services import GlobalCatalogV1, ResourceControllerV2
 
 #
-# Example for Drautomation provisioning and deprovisioning a service instance
+# Example for Powerha automation provisioning and deprovisioning a service instance
 #
 
 
@@ -40,17 +40,13 @@ class TestResourceControllerV2Examples:
         try:
             # Configurable values
             service_name = "power-dr-automation"
-            plan_name = (
-                "power-virtual-server-dr-automation"  # Mention your plan name for your service to create the provision.
-            )
+            plan_name = "powerha-aix-powervs"  # Mention your plan name for your service to create the provision.
             resource_group_id = "8d445dfd58484a4892207123456"  # Replace with your RG ID
-            resource_instance_name = "pythonsdktestmp123"
-            target_region = "global"
+            resource_instance_name = "phasdktestmp123"
+            target_region = "us-east"
 
             # Step 1: Find service entry
-            search_result = catalog_service.list_catalog_entries(
-                q=f"name:{service_name}", account="global", complete=True
-            ).get_result()
+            search_result = catalog_service.list_catalog_entries(q=f"name:{service_name}", complete=True).get_result()
 
             if len(search_result["resources"]) == 0:
                 pytest.fail(f"Service {service_name} not found in catalog")
@@ -105,7 +101,8 @@ class TestResourceControllerV2Examples:
         try:
             # Use the instance GUID from create step OR hardcode one
             instance_guid = globals().get(
-                "crn:v1:bluemix:public:power-dr-automation:global:a/123456991da601b001df1fe:sdfghij-a1a2a3-321a-aaf6-qwerty12345::",
+                "created_instance_guid",
+                "crn:v1:bluemix:public:power-dr-automation:us-east:a/123456991da601b001df1fe:sdfghij-a1a2a3-321a-aaf6-qwerty12345::",
             )
 
             print(f"\nDeleting resource instance: {instance_guid}")

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# (C) Copyright IBM Corp. 2025.
+# (C) Copyright IBM Corp. 2026.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -141,19 +141,29 @@ class TestDrAutomationServiceV1:
             orchestrator_password='testString',
             orchestrator_workspace_id='orch-workspace-01',
             api_key='testString',
+            managed_apikey='testString',
             client_id='abcd-97d2-1234-bf62-8eaecc67a1234',
             client_secret='abcd1234xM1y123wK6qR9123456789bE2jG0pabcdefgh',
             guid='123e4567-e89b-12d3-a456-426614174000',
             orchestrator_ha=True,
+            orchestrator_network_ids=['d9c7f1ab-47b2-4e6f-b0a8-9d2e5d7f5678', '8ab29d71-8321-44d4-9cae-119fdc30a8ab'],
+            orchestrator_workspace_location='us-south',
             proxy_ip='10.40.30.10:8888',
             region_id='us-south',
-            resource_instance='crn:v1:bluemix:public:resource-controller::res123',
+            resource_instance='crn:v1:bluemix:public:resource-controller:us-south:a/123456fb04ceebfb4a9fd38c22334455:resource-instance::',
+            secondary_workspace_id='secondary-workspace789',
             secret='testString',
             secret_group='default-secret-group',
-            ssh_key_name='my-ssh-key',
+            ssh_key_name='sshkey-name',
             standby_machine_type='bx2-8x32',
             standby_orchestrator_name='standbyAdmin',
+            standby_orchestrator_network_ids=[
+                'd9c7f1ab-47b2-4e6f-b0a8-9d2e5d7f5678',
+                '8ab29d71-8321-44d4-9cae-119fdc30a8ab',
+            ],
+            standby_ssh_key_name='standby-sshkey-name',
             standby_orchestrator_workspace_id='orch-standby-02',
+            standby_orchestrator_workspace_location='us-east',
             standby_tier='Premium',
             tenant_name='xxx.ibm.com',
             tier='Standard',
@@ -181,7 +191,6 @@ class TestDrAutomationServiceV1:
     def test_list_events(self):
         response = self.dr_automation_service_service.list_events(
             instance_id='123456d3-1122-3344-b67d-4389b44b7bf9',
-            time='2025-06-19T23:59:59Z',
             from_time='2025-06-19T00:00:00Z',
             to_time='2025-06-19T23:59:59Z',
             accept_language='testString',

@@ -90,9 +90,11 @@ class TestPowerhaAutomationServiceV1Examples:
             )
             api_key_response = response.get_result()
 
-            print(json.dumps(api_key_response, indent=2))
+            print(
+                'create_api_key() request completed successfully. Response body omitted to avoid logging sensitive data.'
+            )
 
-            # end-create_api_key
+            # end-create_api_keys
 
         except ApiException as e:
             pytest.fail(str(e))

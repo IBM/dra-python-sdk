@@ -9,7 +9,9 @@ on:
     types: [created]
   workflow_dispatch:
     # Allow this workflow to be triggered manually
-
+permissions:
+  contents: read
+  
 jobs:
   publish:
     name: publish-release

@@ -90,7 +90,9 @@ class TestPowerhaAutomationServiceV1Examples:
             )
             api_key_response = response.get_result()
 
-            print('create_api_key() request completed successfully. Response body omitted to avoid logging sensitive data.')
+            print(
+                'create_api_key() request completed successfully. Response body omitted to avoid logging sensitive data.'
+            )
 
             # end-create_api_keys
 
